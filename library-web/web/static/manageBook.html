@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书管理中心</title>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/pagination.css">
+    <link rel="stylesheet" href="css/manageBook.css">
+</head>
+<body style="background-color:#D9EDF7">
+<div id="shous">
+    <div class="shous-2">
+        <form class="bs-example bs-example-form" role="form">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="请输入用户手机号码">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </form>
+
+    </div>
+    <div class="shous-2">
+        <form class="bs-example bs-example-form" role="form">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="请输入用户名">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </form>
+    </div>
+    <div class="shous-2">
+        <form class="bs-example bs-example-form" role="form">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="请输入图书名称">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </form>
+    </div>
+    <div class="shous-3">
+        <form class="bs-example bs-example-form" role="form">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <button type="button" class="btn btn-success">查询信息</button>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </form>
+    </div>
+</div>
+<div style="width: 90%;margin: 0 auto">
+    <table class="table" style="width: 100%;margin: 0 auto;font-size: 15px;">
+        <thead style="text-align: center">
+        <tr style="text-align: center">
+            <th style="text-align: center">借书人姓名</th>
+            <th style="text-align: center">借书书名</th>
+            <th style="text-align: center">手机号</th>
+            <th style="text-align: center">借书时间</th>
+            <th style="text-align: center">预计还书时间</th>
+            <th style="text-align: center">状态</th>
+            <th style="text-align: center">操作</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="tr-color">
+            <td>张三</td>
+            <td>java基础</td>
+            <td>169*****4865</td>
+            <td>2019-10-12</td>
+            <td>2019-11-12</td>
+            <td>未归还</td>
+            <td>
+                <button type="button" class="btn btn-success">归还书籍</button>
+                <button type="button" class="btn btn-danger">书籍报损</button>
+                <button type="button" class="btn btn-danger">短信提醒</button>
+            </td>
+        </tr>
+        <tr class="warning">
+            <td>赵六</td>
+            <td>java基础</td>
+            <td>169*****4865</td>
+            <td>2019-10-12</td>
+            <td>2019-11-20</td>
+            <td>未归还</td>
+            <td>
+                <button type="button" class="btn btn-success">归还书籍</button>
+                <button type="button" class="btn btn-danger">书籍报损</button>
+                <button type="button" class="btn btn-danger">短信提示</button>
+            </td>
+        </tr>
+        <tr class="warning">
+            <td>李四</td>
+            <td>网络知识测试</td>
+            <td>129*****3865</td>
+            <td>2019-10-20</td>
+            <td>2019-11-20</td>
+            <td>未归还</td>
+            <td>
+                <button type="button" class="btn btn-success">归还书籍</button>
+                <button type="button" class="btn btn-danger">书籍报损</button>
+                <button type="button" class="btn btn-danger">短信提示</button>
+            </td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>中小学化学基础</td>
+            <td>169*****4865</td>
+            <td>2019-11-12</td>
+            <td>2019-12-12</td>
+            <td>未归还</td>
+            <td>
+                <button type="button" class="btn btn-success">归还书籍</button>
+                <button type="button" class="btn btn-danger">书籍报损</button>
+                <button type="button" class="btn btn-danger">短信提示</button>
+            </td>
+        </tr>
+        <tr>
+            <td>田七</td>
+            <td>高中物理</td>
+            <td>169*****4865</td>
+            <td>2019-11-15</td>
+            <td>2019-12-15</td>
+            <td>未归还</td>
+            <td>
+                <button type="button" class="btn btn-success">归还书籍</button>
+                <button type="button" class="btn btn-danger">书籍报损</button>
+                <button type="button" class="btn btn-danger">短信提示</button>
+            </td>
+        </tr>
+        <tr>
+            <td>小明</td>
+            <td>毛泽东理论</td>
+            <td>169*****5365</td>
+            <td>2019-11-14</td>
+            <td>2019-12-14</td>
+            <td>未归还</td>
+            <td>
+                <button type="button" class="btn btn-success">归还书籍</button>
+                <button type="button" class="btn btn-danger">书籍报损</button>
+                <button type="button" class="btn btn-danger">短信提示</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div style="width: 30%;margin: 0 auto">
+    <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+</div>
+</body>
+</html>

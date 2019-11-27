@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/staffIdMessage.js"></script>
+    <link rel="stylesheet" href="css/staffIdMessage.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body style="background-color: #d9edf7">
+<div id="man-13">
+    <form id="for1" enctype="multipart/form-data">
+        <div id="man-1">
+            <div id="man-1-1">
+           <span id="img">
+               <img src="../page/imges/default.jpg" height="170" id="img-1" width="200"/>
+           </span>
+                <span id="updateFile">
+                     <input type="file" id="file" name="file" width="60px">
+                 </span>
+            </div>
+
+            <div id="man-1-2">
+            <span class="man-1-2-2">
+                <span class="man-1-2-3">
+                    工号：
+                </span>
+                 <span class="man-1-2-4">
+                     <input type="text" disabled class="form-control ling" name="staffId" id="staffId" placeholder="请输入名字">
+                 </span>
+            </span>
+                <span class="man-1-2-2">
+                  <span class="man-1-2-3">
+                    姓名：
+                </span>
+                 <span class="man-1-2-4">
+                     <input type="text" class="form-control ling" name="staffName" id="staffName" placeholder="请输入名字">
+                 </span>
+            </span>
+                <span class="man-1-2-1">  <span class="man-1-2-3">
+                    性别：
+                </span>
+                 <span class="man-1-2-4">
+                     <input type="radio" id="nan" value="男" checked name="staffSex"/><label for="nan">男</label>&nbsp;&nbsp;&nbsp;
+                      <input type="radio" id="nv" value="女" name="staffSex"/><label for="nv">女</label>
+                 </span>
+            </span>
+                <span class="man-1-2-1">
+                  <span class="man-1-2-3">
+                   年龄：
+                </span>
+                 <span class="man-1-2-4">
+                     <input type="text" class="form-control ling" id="staffAge" name="staffAge" placeholder="请输入名字">
+                 </span>
+            </span>
+                <span class="man-1-2-1">  <span class="man-1-2-3">
+                    学历：
+                </span>
+                 <span class="man-1-2-4">
+                    <select class="form-control" name="education" id="education" style="margin-top: 10px">
+                         <option>初中</option>
+                        <option>高中</option>
+                        <option>大专</option>
+                        <option>本科</option>
+                    </select>
+                 </span>
+            </span>
+                <span class="man-1-2-1">
+                  <span class="man-1-2-3">
+                   手机：
+                </span>
+                 <span class="man-1-2-4">
+                     <input type="text" name="staffCal" id="staffCal" class="form-control ling" placeholder="请输入名字">
+                 </span>
+            </span>
+                <span class="man-1-2-1">
+                  <span class="man-1-2-3">
+                职务：
+                </span>
+                 <span class="man-1-2-4">
+                     <select class="form-control" name="duty" id="duty" style="margin-top: 10px">
+                        <option>前台人员</option>
+                        <option>管理人员</option>
+                        <option>保洁人员</option>
+                        <option>人事部门</option>
+                        <option>保安部门</option>
+                    </select>
+                 </span>
+            </span>
+                <span class="man-1-2-1">
+                  <span class="man-1-2-3">
+                  状态：
+                </span>
+                 <span class="man-1-2-4">
+                    &nbsp;&nbsp;&nbsp; <input type="radio" value="0" id="zai" checked name="staffStatic"/><label
+                         for="zai">在职</label>&nbsp;&nbsp;&nbsp;
+                      <input type="radio" id="li" value="1" name="staffStatic"/><label for="li"> 离职</label>
+                 </span>
+            </span>
+            </div>
+        </div>
+        <div id="man-2">
+        <span class="man-2-1">
+            <span class="man-3">身份证：</span>
+            <span class="man-4">
+                 <input type="text" class="form-control ling" id="staffIdcard" name="staffIdcard" placeholder="请输入名字">
+            </span>
+        </span>
+            <span class="man-2-2">
+            <span class="man-3">入职时间：</span>
+            <span class="man-4">
+                 <input type="text" disabled class="form-control ling" id="entryDate"  placeholder="请输入名字">
+            </span>
+        </span>
+            <span class="man-2-1">
+            <span class="man-3">家庭住址：</span>
+            <span class="man-4">
+                  <input type="text" class="form-control ling" id="staffAddress" name="staffAddress"
+                         placeholder="请输入名字">
+            </span>
+        </span>
+            <span class="man-2-2">
+            <span class="man-3">银行卡：</span>
+            <span class="man-4">
+                 <input type="text" class="form-control ling" name="bankCard" id="bankCard" placeh older="请输入名字">
+            </span>
+        </span>
+            <span class="man-2-1">
+            <span class="man-3">联系人:</span>
+            <span class="man-4">
+                 <input type="text" class="form-control ling" id="linkmanName" name="linkmanName" placeholder="请输入名字">
+            </span>
+        </span>
+            <span class="man-2-2">
+            <span class="man-3">手机号:</span>
+            <span class="man-4">
+                 <input type="text" name="linkmanCall" class="form-control ling" id="linkmanCall"
+                        placeholder="请输入联系人手机号">
+            </span>
+        </span>
+        </div>
+
+        <div id="update">
+            <button type="button" class="btn btn-info" id="close">取消</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-info" id="btn">修改</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

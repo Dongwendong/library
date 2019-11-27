@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书信息录入</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/addStaf.css">
+    <link rel="stylesheet" href="css/pagination.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/addBook.js"></script>
+</head>
+<body style="background-color: #d9edf7">
+<div id="add-man">
+    <h3 style="text-align: center">图书信息录入中心</h3>
+    <form id="for1" enctype="multipart/form-data">
+        <table id="tad">
+            <tr>
+                <th class="fontSize">图书名称：</th>
+                <th colspan="5" width="250px">
+                    <input type="text" value="Java从入门到精通（第5版）" name="bookName" class="form-control" placeholder="请输入图书名称">
+                </th>
+                <th class="fontSize">图书类型：</th>
+                <th colspan="5" width="250px" style="text-align: left">
+                    <select  style="width: 30%;height: 30px; font-size: 15px" id="select-1">
+                        <option>科技</option>
+                        <option>教育</option>
+                        <option>小说</option>
+                        <option>文艺</option>
+                        <option>童书</option>
+                        <option>经营</option>
+                        <option>励志</option>
+                        <option>生活</option>
+                    </select>—
+                    <select name="bookType"  style="width: 30%;height: 30px; font-size: 15px;text-align: center" id="tad-1">
+
+
+                    </select>
+                    <button type="button" class="btn btn-success" id="addType">添加类型</button>
+                </th>
+            </tr>
+
+            <tr>
+                <th class="fontSize">图书价格：</th>
+                <th colspan="5" width="250px">
+                    <input type="text" value="22" name="bookPrice" class="form-control" placeholder="请输入图书价格">
+                </th>
+                <th class="fontSize">图书作者：</th>
+                <th colspan="5" width="250px">
+                    <input type="text" value="明日科技" name="author" class="form-control" placeholder="请输入图书作者">
+                </th>
+            </tr>
+            <tr>
+                <th class="fontSize">适用人群：</th>
+                <th colspan="5" width="250px">
+                    <select class="form-control" name="suitable" >
+                        <option>1岁-5岁</option>
+                        <option>5岁-10岁</option>
+                        <option>5岁-15岁</option>
+                        <option>15岁-20岁</option>
+                        <option>20岁以上</option>
+                    </select>
+                </th>
+                <th class="fontSize">出版社：</th>
+                <th colspan="5" width="250px">
+                    <input type="text"  value="清华大学出版社" name="publishing" class="form-control" placeholder="请输入出版社">
+                </th>
+            </tr>
+            <tr>
+                <th class="fontSize">剩余本数：</th>
+                <th colspan="5" width="250px">
+                    <input type="text"  value="22" class="form-control" name="bookResidue" placeholder="请输入剩余的本数">
+                </th>
+                <th class="fontSize">书籍状态：</th>
+                <th colspan="5" width="250px" style="text-align: left">
+                    <input type="radio" name="bookStatic" value="0" checked>暂无
+                    &nbsp; &nbsp; &nbsp; &nbsp;<input type="radio" name="bookStatic" value="1"
+                                                      checked="checked">
+                    充足
+                </th>
+            </tr>
+            <tr>
+                <th class="fontSize">出版时间：</th>
+                <th colspan="5" width="250px">
+                    <input type="date" name="bookDate" style="width: 100%;font-size: 15px;height: 35px"/>
+                </th>
+                <th class="fontSize">购买时间：</th>
+                <th colspan="5" width="250px">
+                    <input type="date" name="buyingDate" style="width: 100%;font-size: 15px;height: 35px"/>
+                </th>
+            </tr>
+            <tr>
+                <th class="fontSize">图书简介：</th>
+                <th colspan="5" width="250px" style="text-align: center">
+                    <textarea class="form-control"  rows="3" name="bookBrief" placeholder="请输入图书简介"></textarea>
+                </th>
+                <th class="fontSize">图书图片：</th>
+                <th colspan="5" width="250px">
+                    <input type="file" name="file">
+                </th>
+            </tr>
+            <tr>
+                <th colspan="8" style="text-align: center">
+                    <button type="button" class="btn btn-danger">退&nbsp;出</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-info" id="btn-1">提&nbsp;交</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">添加图书类型</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="for">
+                    <span class="num">
+                        <select class="form-control" name="t_sum">
+                            <option>科技</option>
+                            <option>教育</option>
+                            <option>小说</option>
+                            <option>文艺</option>
+                            <option>童书</option>
+                            <option>经营</option>
+                            <option>励志</option>
+                            <option>生活</option>
+                         </select>
+                    </span>
+                        <span class="num">
+                            <input type="text" class="form-control" id="zilei" name="t_classify" placeholder="请输入子类名称">
+                        </span>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="btn">添加分类</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+</div>
+
+</body>
+</html>

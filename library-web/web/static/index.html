@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主界面</title>
+    <link rel="stylesheet" href="../page/layui/css/global.css">
+    <link rel="stylesheet" href="../page/css/manInterface.css">
+    <script src="../page/layui/layui.js"></script>
+    <script src="../page/js/manInterface.js"></script>
+    <link rel="stylesheet" href="../page/layui/css/layui.css">
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo" style="font-size: 18px">翰林院－后台管理</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item "><a href="" class="fontpacf ">还书管理</a></li>
+            <li class="layui-nav-item f"><a href="" class="fontpacf">图书管理</a></li>
+            <li class="layui-nav-item f"><a href="" class="fontpacf">用户管理</a></li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">修改密码</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="" class="fontpacf">退出登录</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test" style="margin-top: 20px;">
+
+                <li class="layui-nav-item  ">
+                    <a class="fontpacf" href="javascript:;" data-url="book.html">图书管理</a>
+                    <dl class="layui-nav-child">
+                        <dd id="m1" class="subMenu"><a href="javascript:;" data-url="bookMessage.html">所有图书信息</a></dd>
+                        <dd id="m5" class="subMenu"><a href="javascript:;" data-url="addBook.html">添加图书信息</a></dd>
+                        <dd id="m6" class="subMenu"><a href="javascript:;" data-url="returnBook.html">借阅书籍信息</a></dd>
+                        <dd id="m3" class="subMenu"><a href="javascript:;" data-url="film.html">图书报损</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" class="fontpacf">用户管理</a>
+                    <dl class="layui-nav-child">
+                        <dd id="m12" class="subMenu"><a href="javascript:;" data-url="film.html">查看用户信息</a></dd>
+                        <dd id="m15" class="subMenu"><a href="javascript:;" data-url="film.html">更改用户信息</a></dd>
+                        <dd id="m16" class="subMenu"><a href="javascript:;" data-url="film.html">违约用户信息</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a class="fontpacf" href="javascript:;">员工管理</a>
+                    <dl class="layui-nav-child">
+                        <dd id="m11" class="subMenu"><a href="javascript:;" data-url="suafMessage.html">查看员工信息</a></dd>
+                        <dd id="m22" class="subMenu"><a href="javascript:;" data-url="product_add.html">修改员工信息</a></dd>
+                        <dd id="m23" class="subMenu"><a href="javascript:;" data-url="addStaf.html">添加员工信息</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a class="fontpacf" href="javascript:;" class="fontpacf">押金管理</a>
+                    <dl class="layui-nav-child">
+                        <dd id="m13" class="subMenu"><a href="javascript:;" data-url="huiy.html">退还押金</a></dd>
+                        <dd id="m14" class="subMenu"><a href="javascript:;" data-url="product_add.html">扣除押金</a></dd>
+                        <dd><a href="javascript:;" class="subMenu">增加押金</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 内容主体区域 -->
+    <div class="layui-tab layui-tab-brief" lay-filter="demo" lay-allowclose="true">
+        <ul class="layui-tab-title site-demo-title">
+            <li id="homeTab" class="layui-this" lay-id="1">首页</li>
+        </ul>
+
+        <div class="layui-body layui-tab-content site-demo site-demo-body">
+            <div class="layui-tab-item layui-show">
+                <iframe src="manageBook.html" class="layadmin-iframe" frameborder="no" border="0"
+                        allowtransparency="yes"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

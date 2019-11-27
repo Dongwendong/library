@@ -1,0 +1,27 @@
+.tr-color{
+    background-color: red;
+    color: white;
+}
+th{
+    vertical-align: middle
+}
+tr-1{
+    text-align: center ;
+}
+#shous{
+    width: 70%;
+    height: 40px;
+    margin:  0 auto;
+}
+
+
+.shous-2{
+    width: 29%;
+    height: 40px;
+    float: left;
+}
+.shous-3{
+    width: 12%;
+    height: 40px;
+    float: left;
+}

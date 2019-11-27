@@ -1,0 +1,38 @@
+#add-man {
+
+    width: 80%;
+    margin: 0 auto;
+    background-color: #E9E3E3;
+    border: 1px solid #DBD6D6
+
+}
+
+.bds {
+    width: 80%;
+    background-color: #00F7DE;
+}
+
+#tad {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+.fontSize {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+th {
+    text-align: right;
+}
+
+.size {
+    width: 200px;
+}
+.num{
+     width: 30%;
+     float: left;
+ }

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
+    <context:component-scan base-package="edu.nf.library">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    <bean class="com.alibaba.druid.pool.DruidDataSource" id="dataSource" init-method="init" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url"
+                  value="jdbc:mysql://localhost:3306/library?useSSL=true&amp;useUnicode=true&amp;characterEncoding=utf-8"/>
+        <property name="username" value="test"/>
+        <property name="password" value="test"/>
+        <!-- 连接池属性配置-->
+        <!-- 启用druid系统监控过滤器-->
+        <property name="filters" value="stat"/>
+        <!-- 连接池最大连接数量-->
+        <property name="maxActive" value="200"/>
+        <!-- 初始化连接池时的连接数量-->
+        <property name="initialSize" value="5"/>
+        <!-- 最小连接数量-->
+        <property name="minIdle" value="5"/>
+        <!-- 获取连接的等待时间，单位：毫秒-->
+        <property name="maxWait" value="60000"/>
+        <!-- 连接保持空闲而不被驱逐的最小时间-->
+        <property name="minEvictableIdleTimeMillis" value="300000"/>
+        <!-- 检测连接，如果连接空闲时间大于minEvictableIdleTimeMillis的值，
+        则关闭物理连接-->
+        <property name="timeBetweenEvictionRunsMillis" value="60000"/>
+        <!-- 申请连接时检测，如果空闲时间大于timeBetweenEvictionRunsMillis的值，
+        就执行validationQuery检测连接是否有效-->
+        <property name="testWhileIdle" value="true"/>
+        <!-- 伪sql语句，用于检查连接是否可用-->
+        <property name="validationQuery" value="select 1"/>
+        <!-- 申请连接时执行validationQuery检测连接是否有效，建议设置为false，提高性能-->
+        <property name="testOnBorrow" value="false"/>
+        <!-- 归还连接时是否检测连接是否可用-->
+        <property name="testOnReturn" value="false"/>
+        <!-- 是否缓存PreparedStatement，mysql或oracle建议关闭-->
+        <property name="poolPreparedStatements" value="false"/>
+    </bean>
+    <!--整合mybatis-->
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="typeAliasesPackage" value="edu.nf.library.entity"/>
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+        <property name="plugins">
+            <bean class="com.github.pagehelper.PageInterceptor">
+                <property name="properties">
+                    <props>
+                        <!-- 指定数据库方言 -->
+                        <prop key="helperDialect">mysql</prop>
+                        <!-- 分页参数注解支持-->
+                        <prop key="supportMethodsArguments">true</prop>
+                        <!-- 分页合理化-->
+                        <prop key="rowBoundsWithCount">true</prop>
+                    </props>
+                </property>
+            </bean>
+        </property>
+    </bean>
+    <mybatis:scan base-package="edu.nf.library.dao"/>
+    <!--装配事物管理器-->
+    <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager" id="txManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <tx:annotation-driven transaction-manager="txManager"/>
+    <!--配置表单验证-->
+</beans>

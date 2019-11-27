@@ -1,0 +1,47 @@
+#shous{
+    width: 82%;
+    height: 40px;
+    margin:  0 auto;
+    line-height: 40px;
+}
+.book-message{
+    width: 70px;
+    float: left;
+    line-height: 35px;
+}
+.book-message-1{
+    width: 150px;
+    float: left;
+}
+.book-message-2{
+    width: 70px;
+    float: left;
+    line-height: 40px;
+}
+#shous-1 {
+    width: 20%;
+    height: 40px;
+    float: left;
+}
+
+.shous-2{
+    width: 33%;
+    height: 40px;
+    float: left;
+}
+.shous-3{
+    width: 9%;
+    height: 40px;
+    float: left;
+}
+#message{
+    width: 80%;
+    margin:0 auto;
+}
+img{
+    width: 30px;
+    height: 30px;
+}
+#man{
+    margin: 0 auto;
+}

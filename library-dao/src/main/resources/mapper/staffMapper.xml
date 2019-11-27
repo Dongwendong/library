@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nf.library.dao.StaffMessageDao">
+    <resultMap id="staffMap" type="staffMessage">
+        <id property="staffId" column="s_id"/>
+        <result property="staffName" column="s_name"/>
+        <result property="staffCal" column="s_call"/>
+        <result property="staffAddress" column="s_address"/>
+        <result property="staffIdcard" column="s_idcard"/>
+        <result property="staffSex" column="s_sex"/>
+        <result property="staffAge" column="s_age"/>
+        <result property="staffImg" column="s_img"/>
+        <result property="staffStatic" column="static"/>
+        <result property="education" column="education"/>
+        <result property="entryDate" column="entryDate"/>
+        <result property="duty" column="duty"/>
+        <result property="linkmanName" column="linkmanName"/>
+        <result property="linkmanCall" column="linkmanCall"/>
+        <result property="bankCard" column="bankCard"/>
+        <result property="password" column="password"/>
+    </resultMap>
+    <select id="listStaff" resultMap="staffMap">
+        select s_id,s_name,s_call,s_address,s_idcard,s_sex,s_age,s_img,static,education,entryDate,
+        duty,linkmanName,linkmanCall,bankCard  from staffmessage
+    </select>
+
+    <select id="getLisetStaff" resultMap="staffMap" parameterType="staffMessage">
+          select s_id,s_name,s_call,s_address,s_idcard,s_sex,s_age,s_img,static,education,entryDate,
+        duty,linkmanName,linkmanCall,bankCard  from staffmessage
+        <where>
+            <if test="staffName!=null">
+                s_name=#{staffName}
+            </if>
+            <if test="duty!=null and staffName!=null">
+              and  duty=#{duty}
+            </if>
+            <if test="duty!=null and staffName==null">
+                duty=#{duty}
+            </if>
+        </where>
+    </select>
+    <select id="getId" parameterType="int" resultMap="staffMap">
+            select s_id,s_name,s_call,s_address,s_idcard,s_sex,s_age,s_img,static,education,entryDate,
+        duty,linkmanName,linkmanCall,bankCard  from staffmessage where s_id=#{param1}
+    </select>
+    <insert id="addStaff" parameterType="staffMessage">
+     	    insert into staffmessage(s_name,s_call,s_address,s_idcard,linkmanName,linkmanCall,bankCard,password,duty,s_sex,s_age,s_img,education,entryDate,static
+	 )values(#{staffName},#{staffCal},#{staffAddress},#{staffIdcard},#{linkmanName},#{linkmanCall},#{bankCard},#{password},#{duty},#{staffSex},#{staffAge},#{staffImg}
+	 ,#{education},#{entryDate},#{staffStatic})
+    </insert>
+    <update id="updataStaff" parameterType="staffMessage">
+        update staffmessage set
+        <if test="staffImg!=null and staffImg!=''">
+             s_name=#{staffName},s_call=#{staffCal},s_address=#{staffAddress},s_idcard=#{staffIdcard}
+            ,linkmanName=#{linkmanName},linkmanCall=#{linkmanCall}, bankCard=#{bankCard},duty=#{duty},s_sex=#{staffSex},s_age=#{staffAge},s_img=#{staffImg},entryDate=#{entryDate} where
+            s_id=#{staffId}
+        </if>
+        <if test="staffImg==null">
+             s_name=#{staffName},s_call=#{staffCal},s_address=#{staffAddress},s_idcard=#{staffIdcard}
+            ,linkmanName=#{linkmanName},linkmanCall=#{linkmanCall}, bankCard=#{bankCard},duty=#{duty},s_sex=#{staffSex},s_age=#{staffAge} where
+            s_id=#{staffId}
+        </if>
+    </update>
+</mapper>

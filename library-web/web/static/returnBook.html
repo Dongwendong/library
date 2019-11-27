@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书信息中心</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/book.css">
+    <link rel="stylesheet" href="css/returnBook.css">
+</head>
+<body style="background-color:#D9EDF7">
+<div id="man">
+    <div id="shous" style="width: 90%;">
+        <span class="book-message">书籍名称：</span>
+        <span class="book-message-1">
+              <input type="text" class="form-control" id="name" placeholder="请输入书籍的书名">
+        </span>
+        <span class="book-message-2" style=" width: 110px;text-align: right;font-size: 15px;padding-left:25px ">书籍状态：</span>
+        <span class="book-message-1" style="width: 110px">
+               <input type="radio" name="optionsRadiosinline" value="option1" checked>归还
+                <input type="radio" name="optionsRadiosinline" value="option1" checked="checked">
+                    未归还
+        </span>
+        <span class="book-message-2" style=" width: 110px;padding-left:25px ">书籍类型：</span>
+        <span class="book-message-1" style="width: 200px">
+               <select style="width: 28%;height: 30px; font-size: 15px">
+                          <option>科技</option>
+                        <option>教育</option>
+                        <option>小说</option>
+                        <option>文艺</option>
+                        <option>童书</option>
+                        <option>经营</option>
+                         <option>励志</option>
+                         <option>生活</option>
+                    </select>—
+                    <select style="width: 45%;height: 30px; font-size: 15px;text-align: center">
+
+                        <option>计算机</option>
+                        <option>管理人员</option>
+                        <option>保洁人员</option>
+                        <option>人事部门</option>
+                        <option>保安部门</option>
+                    </select>
+        </span>
+        <span>
+  <button type="button" class="btn btn-success">查询</button>
+        </span>
+    </div>
+
+
+</div>
+</div>
+<div id="message">
+    <table class="table">
+        <thead>
+        <tr>
+
+            <th>书籍名称</th>
+            <th>用户姓名</th>
+            <th>联系方式</th>
+            <th>书籍类型</th>
+            <th>借书时间</th>
+            <th>归还时间</th>
+            <th>是否违约</th>
+            <th>是否处罚</th>
+            <th>书籍状态</th>
+            <th>操作</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>java基础</td>
+            <td>张三</td>
+            <td>169*****4865</td>
+            <td>软件工程</td>
+            <td>2019-10-12</td>
+            <td>还未归还</td>
+            <td>是</td>
+            <td>否</td>
+            <td>未归还</td>
+            <td>
+                <button type="button" class="btn btn-success">详细信息</button>
+            </td>
+        </tr>
+        <tr>
+            <td>java基础</td>
+            <td>赵六</td>
+            <td>169*****4865</td>
+            <td>软件工程</td>
+            <td>2019-10-12</td>
+            <td>2019-11-20</td>
+            <td>否</td>
+            <td>否</td>
+            <td>以归还</td>
+            <td>
+                <button type="button" class="btn btn-success">详细信息</button>
+            </td>
+        </tr>
+        <tr>
+            <td>网络知识测试</td>
+            <td>李四</td>
+            <td>129*****3865</td>
+            <td>软件工程</td>
+            <td>2019-10-20</td>
+            <td>还未归还</td>
+            <td>否</td>
+            <td>否</td>
+            <td>未归还</td>
+            <td>
+                <button type="button" class="btn btn-success">详细信息</button>
+            </td>
+        </tr>
+        <tr>
+            <td>中小学化学基础</td>
+            <td>王五</td>
+            <td>169*****4865</td>
+            <td>化学</td>
+            <td>2019-11-12</td>
+            <td>还未归还</td>
+            <td>否</td>
+            <td>否</td>
+            <td>未归还</td>
+            <td>
+                <button type="button" class="btn btn-success">详细信息</button>
+            </td>
+        </tr>
+        </tbody>
+        <tr>
+            <td>高中物理</td>
+            <td>田七</td>
+            <td>169*****4865</td>
+            <td>物理</td>
+            <td>2019-11-15</td>
+            <td>还未归还</td>
+            <td>否</td>
+            <td>否</td>
+            <td>未归还</td>
+            <td>
+                <button type="button" class="btn btn-success">详细信息</button>
+            </td>
+        </tr>
+        <tr>
+            <td>毛泽东理论</td>
+            <td>小明</td>
+            <td>169*****5365</td>
+            <td>政治</td>
+            <td>2019-11-14</td>
+            <td>还未归还</td>
+            <td>否</td>
+            <td>否</td>
+            <td>未归还</td>
+            <td>
+                <button type="button" class="btn btn-success">详细信息</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div style="width: 30%;margin: 0 auto">
+    <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+</div>
+</body>
+</html>
