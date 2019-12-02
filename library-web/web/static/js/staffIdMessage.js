@@ -19,6 +19,7 @@ $(function () {
                 $("#staffAge").val(res.data.staffAge);
                 $("#education").val(res.data.education);
                 $("#staffCal").val(res.data.staffCal);
+                $("#id").val(res.data.staffId);
                 $("#duty").val(res.data.duty);
                 $("#staffIdcard").val(res.data.staffIdcard);
                 $("#entryDate").val(res.data.entryDate);

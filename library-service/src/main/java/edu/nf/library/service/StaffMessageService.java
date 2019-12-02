@@ -25,5 +25,6 @@ public interface StaffMessageService {
     PageInfo<StaffMessage> listStaff(Integer pageNum, Integer pageSize);
     StaffMessage getId(int id);
     void updataStaff(StaffMessage message);
-
+    StaffMessage login(Integer id ,String password);
+    StaffMessage forGet(Integer id ,String phone);
 }

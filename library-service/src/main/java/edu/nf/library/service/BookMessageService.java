@@ -1,5 +1,6 @@
 package edu.nf.library.service;
 
+import com.github.pagehelper.PageInfo;
 import edu.nf.library.entity.BookMessage;
 import edu.nf.library.entity.StaffMessage;
 
@@ -14,4 +15,13 @@ public interface BookMessageService {
      */
     void addBookMessage(BookMessage message);
 
+    /***
+     * 分页查询
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    PageInfo<BookMessage> listBook(Integer pageNum,Integer pageSize);
+    BookMessage getIdMessage(Integer id);
+    void updateBook(BookMessage message);
 }

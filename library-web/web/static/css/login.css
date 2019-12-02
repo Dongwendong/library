@@ -1,7 +1,7 @@
 
 
  body {
-     background-image: url("../../img/bg.jpg");
+     background-image: url("../imges/11ad41fe184.jpg");
      height: 100%;
      width: 100%;
  }
@@ -46,6 +46,24 @@ input:-webkit-autofill {
     width: 300px;
     padding-bottom: 0px;
 }
+#forget-1{
+    width: 80%;
+    height: 40px;
+    margin-left: 100px;
+}
+#code{
+    width: 70%;
+    height: 40px;
+    float: left;
+}
+#btn{
+    width: 29%;
+    height: 40px;
+    float: right;
+}
+#forGet{
+    cursor: pointer;
+}
 
 .admin-input::-webkit-input-placeholder {
     color: #a78369
@@ -76,7 +94,7 @@ input:-webkit-autofill {
     border-radius: 0 0 10px 10px;
 }
 
-.admin-button {
+.admin-button-1 {
     margin-top: 20px;
     font-weight: bold;
     font-size: 18px;

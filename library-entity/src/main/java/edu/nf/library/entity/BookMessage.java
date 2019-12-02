@@ -1,5 +1,7 @@
 package edu.nf.library.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.ArrayList;
@@ -30,6 +32,7 @@ public class BookMessage {
     /***
      * 出版时间
      */
+    @JsonFormat(pattern = "yyyy年MM月dd日", timezone = "GMT+8")
     private Date bookDate;
     /***
      * 出版社
@@ -54,12 +57,27 @@ public class BookMessage {
     /***
      * 图书的购买时间
      */
+
+
+    @JsonFormat(pattern = "yyyy年MM月dd日", timezone = "GMT+8")
     private Date buyingDate;
     /***
      * 图书作者
      */
     private String author;
+    /***
+     * 适用人群
+     */
     private String suitable;
+    private BookType kind;
+
+    public BookType getKind() {
+        return kind;
+    }
+
+    public void setKind(BookType kind) {
+        this.kind = kind;
+    }
 
     public String getSuitable() {
         return suitable;

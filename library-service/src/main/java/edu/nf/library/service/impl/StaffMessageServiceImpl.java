@@ -52,6 +52,7 @@ public class StaffMessageServiceImpl implements StaffMessageService {
     @Override
     public void updataStaff(StaffMessage message) {
         try {
+            System.out.println(message.getStaffName());
             dao.updataStaff(message);
         } catch (Exception e) {
             e.printStackTrace();
@@ -59,4 +60,22 @@ public class StaffMessageServiceImpl implements StaffMessageService {
         }
     }
 
+    @Override
+    public StaffMessage login(Integer id, String password) {
+            StaffMessage message= dao.login(id,password);
+            if (message!=null){
+                return message;
+            }
+        throw new DataBaseException("你输入的账号有误请重新输入！");
+    }
+
+    @Override
+    public StaffMessage forGet(Integer id, String phone) {
+        StaffMessage message= dao.forGet(id,phone);
+        if (message!=null){
+            return message;
+        }
+        throw new DataBaseException("你输入的账号有误请重新输入！");
+
+    }
 }

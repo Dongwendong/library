@@ -225,4 +225,27 @@ public class StaffMessage {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+        return "StaffMessage{" +
+                "staffId=" + staffId +
+                ", staffName='" + staffName + '\'' +
+                ", staffCal='" + staffCal + '\'' +
+                ", staffAddress='" + staffAddress + '\'' +
+                ", staffIdcard='" + staffIdcard + '\'' +
+                ", staffSex='" + staffSex + '\'' +
+                ", staffAge=" + staffAge +
+                ", staffImg='" + staffImg + '\'' +
+                ", staffStatic=" + staffStatic +
+                ", education='" + education + '\'' +
+                ", entryDate=" + entryDate +
+                ", duty='" + duty + '\'' +
+                ", linkmanName='" + linkmanName + '\'' +
+                ", linkmanCall='" + linkmanCall + '\'' +
+                ", bankCard='" + bankCard + '\'' +
+                ", password='" + password + '\'' +
+                ", operating=" + operating +
+                '}';
+    }
 }

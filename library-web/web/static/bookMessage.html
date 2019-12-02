@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>图书信息中心</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/book.css">
-    <script src="js/jquery.pagination.js"></script>
     <script src="js/jquery-1.12.4.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.pagination.js"></script>
+    <link rel="stylesheet" href="css/pagination.css">
+    <script src="js/bookMessage.js"></script>
+    <link rel="stylesheet" href="css/book.css">
 </head>
 <body style="background-color:#D9EDF7">
 <div id="man">
@@ -24,7 +25,7 @@
         </span>
         <span class="book-message-2">书籍类型：</span>
         <span class="book-message-1" style="width: 300px">
-               <select style="width: 30%;height: 30px; font-size: 15px">
+               <select id="select-1" style="width: 30%;height: 30px; font-size: 15px">
                           <option>科技</option>
                         <option>教育</option>
                         <option>小说</option>
@@ -34,17 +35,11 @@
                          <option>励志</option>
                          <option>生活</option>
                     </select>—
-                    <select style="width: 30%;height: 30px; font-size: 15px;text-align: center">
-
-                        <option>计算机</option>
-                        <option>管理人员</option>
-                        <option>保洁人员</option>
-                        <option>人事部门</option>
-                        <option>保安部门</option>
+                    <select id="tad-1" style="width: 30%;height: 30px; font-size: 15px;text-align: center">
                     </select>
         </span>
         <span>
-  <button type="button" class="btn btn-success">查询</button>
+             <button type="button" class="btn btn-success">查询</button>
         </span>
     </div>
 
@@ -55,6 +50,7 @@
     <table class="table">
         <thead>
         <tr>
+            <th>图书编号</th>
             <th>书籍名称</th>
             <th>书籍价格</th>
             <th>书籍类型</th>
@@ -68,31 +64,13 @@
         </thead>
         <tbody id="tab">
         <tr>
-            <td>大话计算机....</td>
-            <td>115.90</td>
-            <td>计算机</td>
-            <td>机械工业出版社</td>
-            <td>2019年03月</td>
-            <td>兰德尔?E.布莱恩特</td>
-            <td>数量充足</td>
-            <td>
-                <button type="button" class="btn btn-success">修改信息</button>
-            </td>
+
         </tr>
 
         </tbody>
     </table>
 </div>
-<div style="width: 30%;margin: 0 auto">
-    <ul class="pagination">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">&raquo;</a></li>
-    </ul>
+<div id="page" style="width: 30%;margin: 0 auto">
 </div>
 </body>
 </html>

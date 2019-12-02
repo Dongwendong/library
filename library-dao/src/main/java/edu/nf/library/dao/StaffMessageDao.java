@@ -27,4 +27,13 @@ public interface StaffMessageDao {
     List<StaffMessage> getLisetStaff(@Param("pageNum") Integer pageNum, @Param("pageSize") Integer pageSize,StaffMessage message);
     StaffMessage getId(int id);
     void updataStaff(StaffMessage message);
+
+    /***
+     *
+     * @param id 账号id
+     * @param password 账号密码
+     * @return
+     */
+    StaffMessage login(Integer id,String password);
+    StaffMessage forGet(Integer id,String phone);
 }

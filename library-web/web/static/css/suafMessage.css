@@ -4,7 +4,7 @@
     margin: 0 auto;
 }
 #man-1{
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
 }
 .message{
@@ -23,4 +23,7 @@
     height: 40px;
     float: left;
     margin-left: 10px;
+}
+.text{
+    text-align: center;
 }

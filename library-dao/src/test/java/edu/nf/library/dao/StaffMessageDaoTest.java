@@ -73,4 +73,21 @@ public class StaffMessageDaoTest {
         message1.setStaffName("张三");
         dao.updataStaff(message1);
     }
+
+    @Test
+    public void login() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("daolicationContext.xml");
+        StaffMessageDao dao = context.getBean("staffMessageDao", StaffMessageDao.class);
+       StaffMessage message=dao.login(10000,"111111");
+        System.out.println(message);
+
+    }
+
+    @Test
+    public void forGet() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("daolicationContext.xml");
+        StaffMessageDao dao = context.getBean("staffMessageDao", StaffMessageDao.class);
+        StaffMessage message=dao.forGet(10000,"15601804843");
+        System.out.println(message);
+    }
 }
