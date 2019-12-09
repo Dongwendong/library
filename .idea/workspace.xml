@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="library-web:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aba2b4dc-8fdd-44ab-b9aa-6b024d1d2713" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/library-dao/src/main/java/edu/nf/library/dao/BookMessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-dao/src/main/java/edu/nf/library/dao/BookMessageDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-dao/src/main/java/edu/nf/library/dao/BookTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-dao/src/main/java/edu/nf/library/dao/BookTypeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-dao/src/main/java/edu/nf/library/dao/StaffMessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-dao/src/main/java/edu/nf/library/dao/StaffMessageDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-dao/src/main/resources/mapper/BookMessage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-dao/src/main/resources/mapper/BookMessage.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-dao/src/main/resources/mapper/BookTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-dao/src/main/resources/mapper/BookTypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-dao/src/main/resources/mapper/staffMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-dao/src/main/resources/mapper/staffMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-dao/src/test/java/edu/nf/library/dao/BookMessageDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-dao/src/test/java/edu/nf/library/dao/BookMessageDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-dao/src/test/java/edu/nf/library/dao/StaffMessageDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-dao/src/test/java/edu/nf/library/dao/StaffMessageDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-entity/src/main/java/edu/nf/library/entity/BookMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-entity/src/main/java/edu/nf/library/entity/BookMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-entity/src/main/java/edu/nf/library/entity/BorrowBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-entity/src/main/java/edu/nf/library/entity/BorrowBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-entity/src/main/java/edu/nf/library/entity/StaffMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-entity/src/main/java/edu/nf/library/entity/StaffMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-entity/src/main/java/edu/nf/library/entity/UserMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-entity/src/main/java/edu/nf/library/entity/UserMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-service/src/main/java/edu/nf/library/service/BookMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-service/src/main/java/edu/nf/library/service/BookMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-service/src/main/java/edu/nf/library/service/BookTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-service/src/main/java/edu/nf/library/service/BookTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-service/src/main/java/edu/nf/library/service/StaffMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-service/src/main/java/edu/nf/library/service/StaffMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-service/src/main/java/edu/nf/library/service/impl/BookMessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-service/src/main/java/edu/nf/library/service/impl/BookMessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-service/src/main/java/edu/nf/library/service/impl/BookTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-service/src/main/java/edu/nf/library/service/impl/BookTypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-service/src/main/java/edu/nf/library/service/impl/StaffMessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-service/src/main/java/edu/nf/library/service/impl/StaffMessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/src/main/java/edu/nf/library/controller/BookMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-web/src/main/java/edu/nf/library/controller/BookMessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/src/main/java/edu/nf/library/controller/BookTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-web/src/main/java/edu/nf/library/controller/BookTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/src/main/java/edu/nf/library/controller/StaffMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-web/src/main/java/edu/nf/library/controller/StaffMessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/src/main/resources/ApplicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-web/src/main/resources/ApplicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/web/static/addBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-web/web/static/addBook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/web/static/bookMessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-web/web/static/bookMessage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/web/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/library-web/web/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/web/static/css/manageBook.css" beforeDir="false" afterPath="$PROJECT_DIR$/library-web/web/static/css/manageBook.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/web/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-web/web/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/web/static/js/addBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/library-web/web/static/js/addBook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/web/static/js/staffIdMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/library-web/web/static/js/staffIdMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/web/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-web/web/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/web/static/manageBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-web/web/static/manageBook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-web/web/static/returnBook.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="library" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="spring-beans.schema" />
+        <option value="mybatis-mapper" />
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/java软件存处/二学年/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="E:\java软件存处\二学年\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TB9O3uccN1f3SCZanzXwq9yDRi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="compactDirectories" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/library-web/web/static/css" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.37407953" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="edu.nf.library.dao" />
+      <recent name="edu.nf.library.util" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\JavaFile\library\library-web\web\static\css" />
+      <recent name="E:\JavaFile\library\library-web\web\static" />
+      <recent name="E:\JavaFile\library\library-web\web\static\imges" />
+      <recent name="E:\JavaFile\library\library-web\web\sss\js" />
+      <recent name="E:\JavaFile\library\library-web\web\sss" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\JavaFile\library\library-web\web" />
+      <recent name="E:\JavaFile\library\library-web\web\static\css" />
+      <recent name="E:\JavaFile\library\library-web\web\jsp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.422">
+    <configuration name="BookMessageDaoTest.detail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="library-dao" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.nf.library.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.nf.library.dao" />
+      <option name="MAIN_CLASS_NAME" value="edu.nf.library.dao.BookMessageDaoTest" />
+      <option name="METHOD_NAME" value="detail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BorrowBookDaoTest.borrowBook1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="library-dao" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.nf.library.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.nf.library.dao" />
+      <option name="MAIN_CLASS_NAME" value="edu.nf.library.dao.BorrowBookDaoTest" />
+      <option name="METHOD_NAME" value="borrowBook1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BorrowBookDaoTest.getBorrowBookIdMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="library-dao" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.nf.library.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.nf.library.dao" />
+      <option name="MAIN_CLASS_NAME" value="edu.nf.library.dao.BorrowBookDaoTest" />
+      <option name="METHOD_NAME" value="getBorrowBookIdMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BorrowBookDaoTest.listStatic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="library-dao" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.nf.library.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.nf.library.dao" />
+      <option name="MAIN_CLASS_NAME" value="edu.nf.library.dao.BorrowBookDaoTest" />
+      <option name="METHOD_NAME" value="listStatic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BorrowBookDaoTest.returnBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="library-dao" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.nf.library.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.nf.library.dao" />
+      <option name="MAIN_CLASS_NAME" value="edu.nf.library.dao.BorrowBookDaoTest" />
+      <option name="METHOD_NAME" value="returnBook" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StaffMessageDaoTest.addStaff" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="library-dao" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.nf.library.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="PACKAGE_NAME" value="edu.nf.library.dao" />
+      <option name="MAIN_CLASS_NAME" value="edu.nf.library.dao.StaffMessageDaoTest" />
+      <option name="METHOD_NAME" value="addStaff" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.422" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.422" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="E:\java软件存处\Java\jdk1.8.0_144\jre" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="library-web:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/library" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_library_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52451" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Executor">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="library-web:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.StaffMessageDaoTest.addStaff" />
+      <item itemvalue="JUnit.BorrowBookDaoTest.returnBook" />
+      <item itemvalue="JUnit.BorrowBookDaoTest.borrowBook1" />
+      <item itemvalue="JUnit.BorrowBookDaoTest.getBorrowBookIdMessage" />
+      <item itemvalue="JUnit.BorrowBookDaoTest.listStatic" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.422" />
+      <item itemvalue="JUnit.BookMessageDaoTest.detail" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BookMessageDaoTest.detail" />
+        <item itemvalue="JUnit.BorrowBookDaoTest.listStatic" />
+        <item itemvalue="JUnit.BorrowBookDaoTest.getBorrowBookIdMessage" />
+        <item itemvalue="JUnit.BorrowBookDaoTest.borrowBook1" />
+        <item itemvalue="JUnit.BorrowBookDaoTest.returnBook" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.18238021" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aba2b4dc-8fdd-44ab-b9aa-6b024d1d2713" name="Default Changelist" comment="" />
+      <created>1572922585833</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572922585833</updated>
+      <workItem from="1572922588287" duration="2307000" />
+      <workItem from="1573111172693" duration="2926000" />
+      <workItem from="1573182791913" duration="6564000" />
+      <workItem from="1573380832322" duration="5831000" />
+      <workItem from="1573386738587" duration="4008000" />
+      <workItem from="1573430990122" duration="2256000" />
+      <workItem from="1573434883082" duration="10541000" />
+      <workItem from="1573475320008" duration="3336000" />
+      <workItem from="1573515067209" duration="1757000" />
+      <workItem from="1573555127329" duration="6000" />
+      <workItem from="1573802180856" duration="1957000" />
+      <workItem from="1573873155450" duration="11547000" />
+      <workItem from="1573982950499" duration="9923000" />
+      <workItem from="1574037123911" duration="17529000" />
+      <workItem from="1574081818174" duration="963000" />
+      <workItem from="1574119703529" duration="9113000" />
+      <workItem from="1574144595907" duration="11034000" />
+      <workItem from="1574206594797" duration="18644000" />
+      <workItem from="1574293000252" duration="25467000" />
+      <workItem from="1574377952973" duration="20552000" />
+      <workItem from="1574484767285" duration="738000" />
+      <workItem from="1574591054819" duration="7399000" />
+      <workItem from="1574642672247" duration="23942000" />
+      <workItem from="1574727837430" duration="1113000" />
+      <workItem from="1574728983492" duration="20380000" />
+      <workItem from="1574766139299" duration="7145000" />
+      <workItem from="1574810843024" duration="15462000" />
+      <workItem from="1574920948572" duration="2216000" />
+      <workItem from="1574932001506" duration="9534000" />
+      <workItem from="1574994062090" duration="2542000" />
+      <workItem from="1575181712615" duration="12474000" />
+      <workItem from="1575244266030" duration="1784000" />
+      <workItem from="1575247156514" duration="67000" />
+      <workItem from="1575247530277" duration="356000" />
+      <workItem from="1575248702849" duration="142000" />
+      <workItem from="1575248878446" duration="11957000" />
+      <workItem from="1575265979151" duration="5530000" />
+      <workItem from="1575284480877" duration="7254000" />
+      <workItem from="1575328467247" duration="30259000" />
+      <workItem from="1575415994442" duration="12782000" />
+      <workItem from="1575502881160" duration="3263000" />
+      <workItem from="1575528370106" duration="5988000" />
+      <workItem from="1575542443211" duration="5097000" />
+      <workItem from="1575547642397" duration="209000" />
+      <workItem from="1575547870031" duration="1332000" />
+      <workItem from="1575549218084" duration="190000" />
+      <workItem from="1575587802802" duration="8591000" />
+      <workItem from="1575600553938" duration="6455000" />
+      <workItem from="1575616117663" duration="2740000" />
+      <workItem from="1575789078268" duration="10895000" />
+      <workItem from="1575849709622" duration="8468000" />
+    </task>
+    <task id="LOCAL-00001" summary="oneLibtary">
+      <created>1574815319288</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574815319288</updated>
+    </task>
+    <task id="LOCAL-00002" summary=" Libtary">
+      <created>1575288192133</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575288192133</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="oneLibtary" />
+    <MESSAGE value=" Libtary" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Libtary" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="24" key="#Custom_Plugin_Repositories" timestamp="1575615730923">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="24" key="#Custom_Plugin_Repositories/0.0.1366.728@0.0.1366.728" timestamp="1575615730923" />
+    <state x="275" y="25" key="#Project_Structure" timestamp="1575595483581">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="25" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1575595483581" />
+    <state x="137" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575532129516">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1575532129516" />
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1575855241905">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1575855241905" />
+    <state x="363" y="93" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575248739671">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="363" y="93" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1575248739671" />
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1575288184393">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1575288184393" />
+    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1575458886472">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1575458886472" />
+    <state width="1057" height="460" key="GridCell.Tab.0.bottom" timestamp="1575857010635">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575857010635" />
+    <state width="1057" height="460" key="GridCell.Tab.0.center" timestamp="1575857010634">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1575857010634" />
+    <state width="1057" height="460" key="GridCell.Tab.0.left" timestamp="1575857010634">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1575857010634" />
+    <state width="1057" height="460" key="GridCell.Tab.0.right" timestamp="1575857010634">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1575857010634" />
+    <state width="1057" height="460" key="GridCell.Tab.1.bottom" timestamp="1575857010425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575857010425" />
+    <state width="1057" height="460" key="GridCell.Tab.1.center" timestamp="1575857010425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1575857010425" />
+    <state width="1057" height="460" key="GridCell.Tab.1.left" timestamp="1575857010425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1575857010425" />
+    <state width="1057" height="460" key="GridCell.Tab.1.right" timestamp="1575857010425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1575857010425" />
+    <state width="1057" height="460" key="GridCell.Tab.2.bottom" timestamp="1575857010425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575857010425" />
+    <state width="1057" height="460" key="GridCell.Tab.2.center" timestamp="1575857010425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1575857010425" />
+    <state width="1057" height="460" key="GridCell.Tab.2.left" timestamp="1575857010425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1575857010425" />
+    <state width="1057" height="460" key="GridCell.Tab.2.right" timestamp="1575857010425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1575857010425" />
+    <state width="1057" height="460" key="GridCell.Tab.3.bottom" timestamp="1575857010426">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575857010426" />
+    <state width="1057" height="460" key="GridCell.Tab.3.center" timestamp="1575857010425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1575857010425" />
+    <state width="1057" height="460" key="GridCell.Tab.3.left" timestamp="1575857010425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1575857010425" />
+    <state width="1057" height="460" key="GridCell.Tab.3.right" timestamp="1575857010426">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1057" height="460" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1575857010426" />
+    <state x="263" y="101" key="IDE.errors.dialog" timestamp="1575859142437">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="263" y="101" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1575859142437" />
+    <state x="186" y="8" key="SettingsEditor" timestamp="1575616089056">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1575616089056" />
+    <state x="275" y="99" key="Vcs.Push.Dialog.v2" timestamp="1575288193633">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="99" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1575288193633" />
+    <state x="454" y="94" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1575854298258">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="454" y="94" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1575854298258" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1575852819989">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1575852819989" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/library-dao/src/test/java/edu/nf/library/dao/BookTypeDaoTest.java</url>
+          <line>18</line>
+          <properties class="edu.nf.library.dao.BookTypeDaoTest" method="listBookType">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/library-dao/src/test/java/edu/nf/library/dao/BorrowBookDaoTest.java</url>
+          <line>57</line>
+          <properties class="edu.nf.library.dao.BorrowBookDaoTest" method="listStatic">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

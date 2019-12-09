@@ -32,7 +32,7 @@ public class BookMessage {
     /***
      * 出版时间
      */
-    @JsonFormat(pattern = "yyyy年MM月dd日", timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date bookDate;
     /***
      * 出版社
@@ -59,7 +59,7 @@ public class BookMessage {
      */
 
 
-    @JsonFormat(pattern = "yyyy年MM月dd日", timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date buyingDate;
     /***
      * 图书作者

@@ -5,7 +5,6 @@ $(function () {
     //添加书籍信息
     $("#btn-1").on("click",function () {
         var formData = new FormData(document.getElementById('for1'));
-        alert($("#tad-1").val())
         $.ajax({
             url:'../addBook',
             type:'post',

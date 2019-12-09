@@ -12,19 +12,20 @@
 </head>
 <body style="background-color:#D9EDF7">
 <div id="man">
-    <div id="shous">
-        <span class="book-message">书籍名称：</span>
-        <span class="book-message-1">
-              <input type="text" class="form-control" id="name" placeholder="请输入名称">
+    <form id="for">
+        <div id="shous">
+            <span class="book-message">书籍名称：</span>
+            <span class="book-message-1">
+              <input type="text" class="form-control" name="bookName" id="name" placeholder="请输入书籍名称">
         </span>
-        <span class="book-message-2">书籍状态：</span>
-        <span class="book-message-1">
-               <input type="radio" name="optionsRadiosinline" value="option1" checked>告竭
-                  <input type="radio" name="optionsRadiosinline" value="option1" checked="checked">
+            <span class="book-message-2">书籍状态：</span>
+            <span class="book-message-1">
+               <input type="radio" name="bookStatic" value="0" checked>告竭
+                  <input type="radio" name="bookStatic" value="1" checked="checked">
                     充足
         </span>
-        <span class="book-message-2">书籍类型：</span>
-        <span class="book-message-1" style="width: 300px">
+            <span class="book-message-2">书籍类型：</span>
+            <span class="book-message-1" style="width: 300px">
                <select id="select-1" style="width: 30%;height: 30px; font-size: 15px">
                           <option>科技</option>
                         <option>教育</option>
@@ -35,14 +36,14 @@
                          <option>励志</option>
                          <option>生活</option>
                     </select>—
-                    <select id="tad-1" style="width: 30%;height: 30px; font-size: 15px;text-align: center">
+                    <select id="tad-1" style="width: 30%;height: 30px; font-size: 15px;text-align: center" name="bookType">
                     </select>
         </span>
-        <span>
-             <button type="button" class="btn btn-success">查询</button>
+            <span>
+             <button type="button" class="btn btn-success" id="select">查询</button>
         </span>
-    </div>
-
+        </div>
+    </form>
 
 </div>
 </div>

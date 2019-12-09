@@ -1,0 +1,6 @@
+edu\nf\library\entity\BookComment.class
+edu\nf\library\entity\StaffMessage.class
+edu\nf\library\entity\Grade.class
+edu\nf\library\entity\BorrowBook.class
+edu\nf\library\entity\BookMessage.class
+edu\nf\library\entity\UserMessage.class

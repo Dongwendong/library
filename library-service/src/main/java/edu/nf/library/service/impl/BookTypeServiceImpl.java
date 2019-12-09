@@ -38,4 +38,9 @@ public class BookTypeServiceImpl implements BookTypeService {
             throw new DataBaseException("数据库异常，查询失败");
         }
     }
+
+    @Override
+    public List<BookType> list() {
+        return dao.list();
+    }
 }

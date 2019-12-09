@@ -52,4 +52,16 @@ public class BookMessageDaoTest {
         m.setSuitable("sss");
         dao.updateBook(m);
     }
+
+    @Test
+    public void detail() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("daolicationContext.xml");
+        BookMessageDao dao = context.getBean("bookMessageDao", BookMessageDao.class);
+        BookMessage m = new BookMessage();
+        m.setBookName(".NET");
+        m.setBookType("软件工程");
+        m.setBookStatic(1);
+        List<BookMessage> list = dao.detail(1, 100, m);
+        System.out.println(list.size());
+    }
 }

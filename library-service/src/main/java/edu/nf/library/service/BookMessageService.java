@@ -3,6 +3,9 @@ package edu.nf.library.service;
 import com.github.pagehelper.PageInfo;
 import edu.nf.library.entity.BookMessage;
 import edu.nf.library.entity.StaffMessage;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * @author dwd
@@ -24,4 +27,6 @@ public interface BookMessageService {
     PageInfo<BookMessage> listBook(Integer pageNum,Integer pageSize);
     BookMessage getIdMessage(Integer id);
     void updateBook(BookMessage message);
+    PageInfo<BookMessage> detail(Integer pageNum,Integer pageSize, BookMessage message);
+
 }

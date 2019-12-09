@@ -38,4 +38,5 @@ public interface BookMessageDao {
      * @param message
      */
     void updateBook(BookMessage message);
+    List<BookMessage> detail(@Param("pageNum") Integer pageNum,@Param("pageSize") Integer pageSize,BookMessage message);
 }

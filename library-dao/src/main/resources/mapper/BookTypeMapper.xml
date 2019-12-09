@@ -13,4 +13,7 @@
     <select id="listBookType" parameterType="string" resultMap="bookTypeMap">
         select t_classify from booktype where t_sum=#{param1}
     </select>
+    <select id="list" resultMap="bookTypeMap">
+            select  distinct  t_sum from  booktype
+    </select>
 </mapper>

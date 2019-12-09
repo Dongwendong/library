@@ -62,7 +62,7 @@ public class StaffMessage {
     /***
      * 管理员入职时间
      */
-    @JsonFormat(pattern = "yyyy年MM月dd日", timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     @NotNull(message = "{StaffMessage.entryDate}")
     private Date entryDate;
     /***

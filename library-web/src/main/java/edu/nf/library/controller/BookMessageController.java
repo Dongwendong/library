@@ -74,8 +74,17 @@ public class BookMessageController extends BaseController {
         service.addBookMessage(message);
         return success(message.getBookName() + "添加成功");
     }
+
     @RequestMapping("/bookImg")
-    public ResponseVO test1(MultipartFile file,HttpServletRequest request){
-        return success(test(file,request)) ;
+    public ResponseVO test1(MultipartFile file, HttpServletRequest request) {
+        return success(test(file, request));
+    }
+    @PostMapping("/detail")
+    public ResponseVO< PageInfo<BookMessage>> detail(Integer pageNum, Integer pageSize,String bookName,Integer bookStatic,String bookType ) {
+        BookMessage message =new BookMessage();
+        message.setBookStatic(bookStatic);
+        message.setBookType(bookType);
+        message.setBookName(bookName);
+        return success( service.detail(pageNum, pageSize, message));
     }
 }

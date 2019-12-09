@@ -36,4 +36,5 @@ public interface StaffMessageDao {
      */
     StaffMessage login(Integer id,String password);
     StaffMessage forGet(Integer id,String phone);
+    void updatePassword(Integer id,String password);
 }

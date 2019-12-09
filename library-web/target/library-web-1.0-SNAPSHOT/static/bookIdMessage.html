@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书信息</title>
+    <link rel="stylesheet" href="css/bookIdMessage.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/bookIdMessage.js"></script>
+</head>
+<body>
+<div id="message">
+    <form id="for1">
+        <div id="imges">
+            <img src="../page/imges/default.jpg" id="img-1">
+            <input name="file" type="file" id="img" >
+        </div>
+        <div id="bookMessage">
+            <div class="size" style="margin-top: 0">
+                <span class="name">图书编号:</span>
+                <span class="value">
+             <input type="text" disabled  id="bookId"class="form-control" placeholder="">
+             </span>
+            </div>
+            <div class="size" style="margin-top: 0">
+                <span class="name">图书名称:</span>
+                <span class="value">
+             <input type="text"  name="bookName"  id="bookName" class="form-control" placeholder="">
+                    <input type="hidden" id="id" name="bookId">
+             </span>
+            </div>
+            <div class="size">
+                <span class="name">图书价格:</span>
+                <span class="value">
+             <input type="text"  id="bookPrice" name="bookPrice" class="form-control" placeholder="">
+             </span>
+            </div>
+            <div class="size">
+                <span class="name">图书类型:</span>
+                <span class="value">
+                 <select class="form-control"  id="select-1"  style="width: 45%;float: left">
+                        <option>教育</option>
+                        <option>科技</option>
+                        <option>小说</option>
+                        <option>文艺</option>
+                        <option>童书</option>
+                        <option>经营</option>
+                        <option>励志</option>
+                        <option>生活</option>
+                 </select><span style="line-height: 30px">—</span>
+                 <select class="form-control"  id="bookType" name="bookType" style="width: 45%;float: right">
+                    </select>
+             </span>
+            </div>
+            <div class="size">
+                <span class="name">出版社:</span>
+                <span class="value">
+             <input type="text"  id="publishing" name="publishing" class="form-control" placeholder="">
+             </span>
+            </div>
+            <div class="size">
+                <span class="name">适用人群:</span>
+                <span class="value">
+                    <select class="form-control" id="suitable" name="suitable">
+                        <option>1岁-5岁</option>
+                        <option>5岁-10岁</option>
+                        <option>5岁-15岁</option>
+                        <option>15岁-20岁</option>
+                        <option>20岁以上</option>
+                    </select>
+             </span>
+            </div>
+            <div class="size">
+                <span class="name">图书状态:</span>
+                <span class="value" style="line-height: 45px">
+             &nbsp; <input type="radio" value="0" id="zai"  name="bookStatic"/><label
+                        for="zai">告竭</label>&nbsp;&nbsp;&nbsp;
+                      <input type="radio" id="li" value="1" name="bookStatic"/><label for="li"> 充足</label>
+             </span>
+            </div>
+            <div class="size">
+                <span class="name">图书作者:</span>
+                <span class="value">
+             <input type="text" id="author" name="author" class="form-control" placeholder="">
+             </span>
+            </div>
+            <div class="size">
+                <span class="name">出版时间:</span>
+                <span class="value">
+             <input type="text"  disabled id="bookDate" name="bookDate" class="form-control" placeholder="">
+             </span>
+            </div>
+            <div class="size">
+                <span class="name">购买时间:</span>
+                <span class="value">
+             <input type="text" disabled id="buyingDate" name="buyingDate" class="form-control" placeholder="">
+             </span>
+            </div>
+            <div class="size">
+                <span class="name">剩余本数:</span>
+                <span class="value">
+                  <input type="text" name="bookResidue" id="bookResidue" class="form-control" placeholder="">
+             </span>
+            </div>
+            <div class="size">
+                <span class="name">图书简介：</span>
+                <span class="value">
+               <textarea class="form-control" rows="3" name="bookBrief" id="bookBrief" placeholder="请输入图书简介"></textarea>
+             </span>
+            </div>
+        </div>
+    </form>
+    <div id="btn">
+        <button type="button" class="btn btn-danger" id="btn-2">退&nbsp;出</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-info" id="btn-1">修&nbsp;改</button>
+    </div>
+</div>
+</body>
+</html>

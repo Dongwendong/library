@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nf.library.dao.BookMessageDao">
+    <resultMap id="bookMessageMap" type="bookMessage">
+        <id property="bookId" column="b_id"/>
+        <result property="bookName" column="b_name"/>
+        <result property="bookPrice" column="b_price"/>
+        <result property="bookType" column="b_type"/>
+        <result property="bookDate" column="b_data"/>
+        <result property="publishing" column="publishing"/>
+        <result property="bookStatic" column="b_state"/>
+        <result property="bookImg" column="b_img"/>
+        <result property="bookBrief" column="b_brief"/>
+        <result property="bookResidue" column="b_residue"/>
+        <result property="buyingDate" column="buyingDate"/>
+        <result property="author" column="author"/>
+        <result property="suitable" column="suitable"/>
+        <association property="kind" resultMap="typeMap"/>
+    </resultMap>
+    <resultMap id="typeMap" type="bookType">
+        <id property="typeId" column="t_id"/>
+        <result property="t_sum" column="t_sum"/>
+        <result property="t_classify" column="t_classify"/>
+    </resultMap>
+    <select id="addBookMessage" parameterType="bookMessage">
+        insert into bookmessage(b_name,b_price,b_type,b_data,publishing,b_state,b_img,b_brief,b_residue,buyingDate,author,suitable)VALUES
+        (#{bookName},#{bookPrice},#{bookType},#{bookDate},#{publishing},#{bookStatic},#{bookImg},#{bookBrief},#{bookResidue},#{buyingDate},#{author},#{suitable})
+    </select>
+    <select id="listBook" resultMap="bookMessageMap">
+        select b_id, b_name,b_price,b_type,b_data,publishing,b_state,b_img,b_brief,b_residue,buyingDate,author,suitable from bookmessage
+    </select>
+    <select id="getIdMessage" resultMap="bookMessageMap" parameterType="int">
+        select b.b_id, b.b_name,b.b_price,b.b_data,b.publishing,b.b_state,b.b_img,b.b_brief,b.b_residue,b.buyingDate,b.author,b.suitable,t.t_classify,t.t_sum from bookmessage
+        b left join booktype t on b.b_type=t.t_classify where b.b_id=#{param1}
+    </select>
+    <select id="detail" resultMap="bookMessageMap">
+           select b.b_id, b.b_name,b.b_price,b.b_data,b.publishing,b.b_state,b.b_type,b.b_img,b.b_brief,b.b_residue,b.buyingDate,b.author,b.suitable,t.t_classify,t.t_sum from bookmessage
+        b left join booktype t on b.b_type=t.t_classify where b.b_type=#{param3.bookType} and b.b_state=#{param3.bookStatic}
+        <if test="param3.bookName!=null and param3.bookName!=''">
+            and b.b_name= '%'+#{param3.bookName}+'%'
+        </if>
+    </select>
+    <update id="updateBook" parameterType="bookMessage">
+        update bookmessage set
+        <if test="bookImg==null">
+            b_name=#{bookName},b_price=#{bookPrice},b_type=#{bookType},publishing=#{publishing},
+            b_state=#{bookStatic},b_brief=#{bookBrief},b_residue=#{bookResidue},author=#{author}
+            ,suitable=#{suitable} where b_id=#{bookId}
+        </if>
+        <if test="bookImg!=null and bookImg!=''">
+            b_name=#{bookName},b_price=#{bookPrice},b_type=#{bookType},publishing=#{publishing},
+            b_state=#{bookStatic},b_brief=#{bookBrief},b_residue=#{bookResidue},author=#{author}
+            ,suitable=#{suitable},b_img=#{bookImg} where b_id=#{bookId}
+        </if>
+    </update>
+
+</mapper>

@@ -3,50 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>图书管理中心</title>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery-1.12.4.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/pagination.css">
     <link rel="stylesheet" href="css/manageBook.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery.pagination.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/manageBook.js"></script>
 </head>
 <body style="background-color:#D9EDF7">
 <div id="shous">
-    <div class="shous-2">
-        <form class="bs-example bs-example-form" role="form">
-            <div class="col-lg-6">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="请输入用户手机号码">
-                </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
-        </form>
+    <div class="shous-2" style="margin-left: 100px">
+        <div class="input-group">
+            <input type="text" class="form-control" id="bookId-1" placeholder="书籍编号查询">
+            <span class="input-group-addon ss" id="bookIdcx" style="background-color: #418BCA;color: white; cursor:pointer;">搜索</span>
+        </div>
+    </div>
+    <div class="shous-2" style="margin-left: 60px">
+        <div class="input-group">
+            <input type="text" class="form-control" id="phone-1" placeholder="用户手机号查询">
+            <span class="input-group-addon ss" id="phonecx" style="background-color: #418BCA;color: white; cursor:pointer;">搜索</span>
+        </div>
+    </div>
 
-    </div>
-    <div class="shous-2">
-        <form class="bs-example bs-example-form" role="form">
-            <div class="col-lg-6">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="请输入用户名">
-                </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
-        </form>
-    </div>
-    <div class="shous-2">
-        <form class="bs-example bs-example-form" role="form">
-            <div class="col-lg-6">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="请输入图书名称">
-                </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
-        </form>
-    </div>
-    <div class="shous-3">
-        <form class="bs-example bs-example-form" role="form">
-            <div class="col-lg-6">
-                <div class="input-group">
-                    <button type="button" class="btn btn-success">查询信息</button>
-                </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
-        </form>
     </div>
 </div>
 <div style="width: 90%;margin: 0 auto">
@@ -63,98 +42,129 @@
 
         </tr>
         </thead>
-        <tbody>
-        <tr class="tr-color">
-            <td>张三</td>
-            <td>java基础</td>
-            <td>169*****4865</td>
-            <td>2019-10-12</td>
-            <td>2019-11-12</td>
-            <td>未归还</td>
-            <td>
-                <button type="button" class="btn btn-success">归还书籍</button>
-                <button type="button" class="btn btn-danger">书籍报损</button>
-                <button type="button" class="btn btn-danger">短信提醒</button>
-            </td>
-        </tr>
-        <tr class="warning">
-            <td>赵六</td>
-            <td>java基础</td>
-            <td>169*****4865</td>
-            <td>2019-10-12</td>
-            <td>2019-11-20</td>
-            <td>未归还</td>
-            <td>
-                <button type="button" class="btn btn-success">归还书籍</button>
-                <button type="button" class="btn btn-danger">书籍报损</button>
-                <button type="button" class="btn btn-danger">短信提示</button>
-            </td>
-        </tr>
-        <tr class="warning">
-            <td>李四</td>
-            <td>网络知识测试</td>
-            <td>129*****3865</td>
-            <td>2019-10-20</td>
-            <td>2019-11-20</td>
-            <td>未归还</td>
-            <td>
-                <button type="button" class="btn btn-success">归还书籍</button>
-                <button type="button" class="btn btn-danger">书籍报损</button>
-                <button type="button" class="btn btn-danger">短信提示</button>
-            </td>
-        </tr>
-        <tr>
-            <td>王五</td>
-            <td>中小学化学基础</td>
-            <td>169*****4865</td>
-            <td>2019-11-12</td>
-            <td>2019-12-12</td>
-            <td>未归还</td>
-            <td>
-                <button type="button" class="btn btn-success">归还书籍</button>
-                <button type="button" class="btn btn-danger">书籍报损</button>
-                <button type="button" class="btn btn-danger">短信提示</button>
-            </td>
-        </tr>
-        <tr>
-            <td>田七</td>
-            <td>高中物理</td>
-            <td>169*****4865</td>
-            <td>2019-11-15</td>
-            <td>2019-12-15</td>
-            <td>未归还</td>
-            <td>
-                <button type="button" class="btn btn-success">归还书籍</button>
-                <button type="button" class="btn btn-danger">书籍报损</button>
-                <button type="button" class="btn btn-danger">短信提示</button>
-            </td>
-        </tr>
-        <tr>
-            <td>小明</td>
-            <td>毛泽东理论</td>
-            <td>169*****5365</td>
-            <td>2019-11-14</td>
-            <td>2019-12-14</td>
-            <td>未归还</td>
-            <td>
-                <button type="button" class="btn btn-success">归还书籍</button>
-                <button type="button" class="btn btn-danger">书籍报损</button>
-                <button type="button" class="btn btn-danger">短信提示</button>
-            </td>
-        </tr>
+        <tbody id="tad">
         </tbody>
     </table>
 </div>
-<div style="width: 30%;margin: 0 auto">
-    <ul class="pagination">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">&raquo;</a></li>
-    </ul>
+<div style="width: 30%;margin: 0 auto" id="page"></div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">归还图书</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="sr-only" for="bookId">书籍编号</label>
+                    <input type="text" class="form-control" id="bookId" placeholder="请输入书籍编号">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="btn">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel1" style="text-align: center">确认信息</h4>
+            </div>
+            <div class="modal-body">
+              <h3 id="userName" style="text-align: center"></h3>
+                <h3 id="phone"style="text-align: center"></h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="btn1">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width: 700px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel2" style="text-align: center">借书详情</h4>
+            </div>
+            <div class="modal-body">
+               <div class="size">
+                   <span class="title-1">用户姓名：</span>
+                   <span class="message-4">
+                       <input type="text" id="userName-1" class="form-control"  >
+                   </span>
+               </div>
+                <div class="size1">
+                    <span class="title-1">手机号：</span>
+                    <span class="message-4">
+                         <input type="text" id="userPhone" class="form-control"  >
+                    </span>
+                </div>
+                <div class="size">
+                    <span class="title-1">书籍名称：</span>
+                    <span class="message-4">
+                       <input type="text" id="bookName" class="form-control"  >
+                   </span>
+                </div>
+                <div class="size1">
+                    <span class="title-1">书籍编号：</span>
+                    <span class="message-4">
+                         <input type="text" id="bookId-2" class="form-control"  >
+                    </span>
+                </div>
+                <div class="size">
+                    <span class="title-1">用户信誉：</span>
+                    <span class="message-4">
+                       <input type="text" id="integral" class="form-control"  >
+                   </span>
+                </div>
+                <div class="size1">
+                    <span class="title-1">用户押金：</span>
+                    <span class="message-4">
+                         <input type="text" id="cash" class="form-control"  >
+                    </span>
+                </div>
+                <div class="size">
+                    <span class="title-1">书籍价格：</span>
+                    <span class="message-4">
+                       <input type="text" id="bookPrice" class="form-control"  >
+                   </span>
+                </div>
+                <div class="size1">
+                    <span class="title-1">书籍类型</span>
+                    <span class="message-4">
+                         <input type="text" id="bookType" class="form-control"  >
+                    </span>
+                </div>
+                <div class="size">
+                    <span class="title-1">借书时间</span>
+                    <span class="message-4">
+                         <input type="date" id="borrowDate" class="form-control"  >
+                    </span>
+                </div>
+                <div class="size1">
+                    <span class="title-1">
+                        预计还书时间
+                    </span>
+                    <span class="message-4">
+                         <input type="date" id="predictData" class="form-control"  >
+                    </span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="btn2">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+
 </div>
 </body>
 </html>

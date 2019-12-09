@@ -1,5 +1,8 @@
 package edu.nf.library.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -20,6 +23,7 @@ public class UserMessage {
      *   password;密码
      *     userImg;图片
      *      userStatic;状态
+     *      edication:学历
      */
     private String userId;
     private String userName;
@@ -27,13 +31,14 @@ public class UserMessage {
     private Integer userAge;
     private String userCall;
     private String idCard;
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date registerDate;
     private Integer integral;
     private String password;
-    private String cash;
+    private BigDecimal cash;
     private String userImg;
     private Integer userStatic;
-
+    private String edication;
     public String getUserId() {
         return userId;
     }
@@ -106,11 +111,11 @@ public class UserMessage {
         this.password = password;
     }
 
-    public String getCash() {
+    public BigDecimal getCash() {
         return cash;
     }
 
-    public void setCash(String cash) {
+    public void setCash(BigDecimal cash) {
         this.cash = cash;
     }
 
@@ -129,4 +134,16 @@ public class UserMessage {
     public void setUserStatic(Integer userStatic) {
         this.userStatic = userStatic;
     }
+
+    public String getEdication() {
+        return edication;
+    }
+
+    public void setEdication(String edication) {
+        this.edication = edication;
+    }
+
+
+
+
 }

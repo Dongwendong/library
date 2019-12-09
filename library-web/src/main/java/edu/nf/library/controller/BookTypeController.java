@@ -17,13 +17,16 @@ public class BookTypeController extends BaseController {
     BookTypeService service;
     @PostMapping("/listBookType")
     public ResponseVO listBookType(String num) {
-        System.out.println(num);
         return success(service.listBookType(num));
     }
     @PostMapping("/addBookType")
     public ResponseVO addBookType(BookType bookType){
         service.addBookType(bookType);
         return success("图书类型添加成功");
+    }
+    @PostMapping("/list")
+    public  ResponseVO list(){
+       return success(service.list());
     }
 
 }

@@ -20,6 +20,7 @@ import java.util.List;
 public class StaffMessageServiceImpl implements StaffMessageService {
     @Autowired
     StaffMessageDao dao;
+
     @Override
     public void addStaff(StaffMessage staffMessage) {
         try {
@@ -29,11 +30,12 @@ public class StaffMessageServiceImpl implements StaffMessageService {
             throw new DataBaseException("数据异常！用户添加失败");
         }
     }
+
     @Override
     public PageInfo<StaffMessage> listStaff(Integer pageNum, Integer pageSize) {
         try {
-            List<StaffMessage>staffMessageList= dao.listStaff(pageNum,pageSize);
-            PageInfo<StaffMessage>pageInfo=new PageInfo<>(staffMessageList);
+            List<StaffMessage> staffMessageList = dao.listStaff(pageNum, pageSize);
+            PageInfo<StaffMessage> pageInfo = new PageInfo<>(staffMessageList);
             return pageInfo;
         } catch (Exception e) {
             throw new DataBaseException("数据库异常！查询失败！");
@@ -45,7 +47,7 @@ public class StaffMessageServiceImpl implements StaffMessageService {
         try {
             return dao.getId(id);
         } catch (Exception e) {
-           throw new DataBaseException(id+"该id无效！请确认后输入正确的账号。。");
+            throw new DataBaseException(id + "该id无效！请确认后输入正确的账号。。");
         }
     }
 
@@ -62,20 +64,32 @@ public class StaffMessageServiceImpl implements StaffMessageService {
 
     @Override
     public StaffMessage login(Integer id, String password) {
-            StaffMessage message= dao.login(id,password);
-            if (message!=null){
-                return message;
-            }
+        password = MD5Util.encode(password);
+        StaffMessage message = dao.login(id, password);
+        if (message != null) {
+            return message;
+        }
         throw new DataBaseException("你输入的账号有误请重新输入！");
     }
 
     @Override
     public StaffMessage forGet(Integer id, String phone) {
-        StaffMessage message= dao.forGet(id,phone);
-        if (message!=null){
+        StaffMessage message = dao.forGet(id, phone);
+        if (message != null) {
             return message;
         }
         throw new DataBaseException("你输入的账号有误请重新输入！");
+    }
+
+    @Override
+    public void updatePassword(Integer id, String password) {
+        try {
+            password = MD5Util.encode(password);
+            dao.updatePassword(id, password);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new DataBaseException("数据异常！密码修改失败");
+        }
 
     }
 }

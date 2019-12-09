@@ -1,0 +1,29 @@
+#man{
+    width: 60%;
+    height: 40px;
+    margin: 0 auto;
+}
+#man-1{
+    width: 90%;
+    margin: 0 auto;
+}
+.message{
+    width: 28%;
+    height: 40px;
+    float: left;
+}
+.message-1{
+    width: 28%;
+    height: 40px;
+    float: left;
+    margin-left: 10px;
+}
+.message-2{
+    width: 10%;
+    height: 40px;
+    float: left;
+    margin-left: 10px;
+}
+.text{
+    text-align: center;
+}

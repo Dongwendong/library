@@ -6,10 +6,13 @@
     <link rel="stylesheet" href="../page/layui/css/global.css">
     <link rel="stylesheet" href="../page/css/manInterface.css">
     <script src="../page/layui/layui.js"></script>
-    <script src="../page/js/manInterface.js"></script>
     <link rel="stylesheet" href="../page/layui/css/layui.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="../page/js/manInterface.js"></script>
     <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index-1.css">
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">
@@ -20,18 +23,20 @@
             <li class="layui-nav-item "><a href="" class="fontpacf ">还书管理</a></li>
             <li class="layui-nav-item f"><a href="" class="fontpacf">图书管理</a></li>
             <li class="layui-nav-item f"><a href="" class="fontpacf">用户管理</a></li>
+            <li class="layui-nav-item f" style="font-size: 18px;color: white;margin-left: 200px" id="staffName1">欢迎你好了
+            </li>
         </ul>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    <img src="http://t.cn/RCzsdCq" id="img" class="layui-nav-img">
                 </a>
                 <dl class="layui-nav-child">
-                    <dd><a href="">基本资料</a></dd>
-                    <dd><a href="">修改密码</a></dd>
+                    <dd><span id="message" style="color: #0A0E11;text-align: center">基本资料</span></dd>
+                    <dd><span id="updatePassword" style="color: #0A0E11;text-align: center">修改密码</span></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="" class="fontpacf">退出登录</a></li>
+            <li class="layui-nav-item"><span id="tc" class="fontpacf">退出登录</span></li>
         </ul>
     </div>
 
@@ -45,7 +50,7 @@
                     <dl class="layui-nav-child">
                         <dd id="m1" class="subMenu"><a href="javascript:;" data-url="bookMessage.html">所有图书信息</a></dd>
                         <dd id="m5" class="subMenu"><a href="javascript:;" data-url="addBook.html">添加图书信息</a></dd>
-                        <dd id="m6" class="subMenu"><a href="javascript:;" data-url="bookIdMessage.html">借阅书籍信息</a></dd>
+                        <dd id="m6" class="subMenu"><a href="javascript:;" data-url="borrowMessage.html">借阅书籍信息</a></dd>
                         <dd id="m3" class="subMenu"><a href="javascript:;" data-url="film.html">图书报损</a></dd>
                     </dl>
                 </li>
@@ -90,6 +95,185 @@
             </div>
         </div>
     </div>
+</div>
+<!--个人信息-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width: 700px;height: 550px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">个人信息管理</h4>
+            </div>
+            <div class="modal-body">
+                <form  enctype="multipart/form-data" id="for">
+                    <div id="img-1">
+                        <img src="" id="img-2" style="width: 150px;height: 100px">
+                        <input type="file" name="file" id="file">
+                    </div>
+                    <div class="message-1">
+                        <span class="title">工号：</span>
+                        <span class="message-3">
+                            <input type="text" disabled class="form-control ling" id="staffId">
+                            <input type="hidden" id="id" name="staffId">
+                    </span>
+                    </div>
+                    <div class="message-2">
+                        <span class="title"> 姓名：</span>
+                        <span class="message-3">
+                         <input type="text" class="form-control ling" name="staffName" id="staffName"
+                                placeholder="请输入名字">
+                    </span>
+                    </div>
+                    <div class="message-1">
+                        <span class="title">性别：</span>
+                        <span class="message-3">
+                         <input type="radio" id="nan" value="男" checked name="staffSex"/><label for="nan">男</label>&nbsp;&nbsp;&nbsp;
+                      <input type="radio" id="nv" value="女" name="staffSex"/><label for="nv">女</label>
+                    </span>
+                    </div>
+                    <div class="message-2">
+                        <span class="title"> 年龄：</span>
+                        <span class="message-3">
+                        <input type="text" class="form-control ling" id="staffAge" name="staffAge" placeholder="请输入名字">
+                    </span>
+                    </div>
+                    <div class="message-1">
+                        <span class="title">  学历：</span>
+                        <span class="message-3">
+                        <select class="form-control" name="education" id="education" style="margin-top: 10px">
+                         <option>初中</option>
+                        <option>高中</option>
+                        <option>大专</option>
+                        <option>本科</option>
+                    </select>
+                    </span>
+                    </div>
+                    <div class="message-2">
+                        <span class="title"> 手机：</span>
+                        <span class="message-3">
+                        <input type="text" name="staffCal" id="staffCal" class="form-control ling" placeholder="请输入名字">
+                    </span>
+                    </div>
+                    <div class="message-1">
+                        <span class="title"> 职务：</span>
+                        <span class="message-3">
+                        <select class="form-control" name="duty" id="duty" style="margin-top: 10px">
+                            <option>前台人员</option>
+                            <option>管理人员</option>
+                            <option>保洁人员</option>
+                            <option>人事部门</option>
+                            <option>保安部门</option>
+                         </select>
+                    </span>
+                    </div>
+                    <div class="message-2">
+                    <span class="title">
+                          状态：
+                    </span>
+                        <span class="message-3">
+                           <input type="text" disabled value="在职" class="form-control ling"
+                                  placeholder="">
+                            <input type="hidden" value="1" name="staffStatic">
+                    </span>
+                    </div>
+                    <div class="message-1">
+                        <span class="title"> 身份证：：</span>
+                        <span class="message-3">
+                        <input type="text" class="form-control ling" id="staffIdcard" name="staffIdcard"
+                               placeholder="请输入名字">
+                    </span>
+                    </div>
+                    <div class="message-2">
+                    <span class="title">
+                        入职时间：
+                    </span>
+                        <span class="message-3">
+                            <input type="text" disabled class="form-control ling" id="entryDate" placeholder="请输入名字">
+                            <input type="date" id="data" name="entryDate">
+
+                    </span>
+                    </div>
+                    <div class="message-1">
+                        <span class="title"> 家庭住址：</span>
+                        <span class="message-3">
+                           <input type="text" class="form-control ling" id="staffAddress" name="staffAddress"
+                                  placeholder="请输入名字">
+                    </span>
+                    </div>
+                    <div class="message-2">
+                    <span class="title">
+                        银行卡：
+                    </span>
+                        <span class="message-3">
+                         <input type="text" class="form-control ling" name="bankCard" id="bankCard" placeh
+                                older="请输入名字">
+                    </span>
+                    </div>
+                    <div class="message-1">
+                        <span class="title"> 联系人：</span>
+                        <span class="message-3">
+                        <input type="text" class="form-control ling" id="linkmanName" name="linkmanName"
+                               placeholder="请输入名字">
+                    </span>
+                    </div>
+                    <div class="message-2">
+                    <span class="title">
+                     手机号:
+                    </span>
+                        <span class="message-3">
+                         <input type="text" name="linkmanCall" class="form-control ling" id="linkmanCall"
+                                placeholder="请输入联系人手机号">
+                    </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary" id="btn">提交更改</button>
+        </div>
+    </div><!-- /.modal-content -->
+</div><!-- /.modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel1"></h4>
+            </div>
+            <div class="modal-body">
+                <label for="password-1" class="col-sm-2 control-label" style="text-align: right">修改密码:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control"  id="password-1" placeholder="请输入新的密码">
+                </div>
+                <label for="password-2" class="col-sm-2 control-label"  style="text-align: right">确认密码:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control"  id="password-2"  placeholder="请再次输入密码">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="updatePasswordbtn">确认修改</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel2"></h4>
+            </div>
+            <div class="modal-body">
+                <span id="tishi"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="close">退出登录</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
 </div>
 </body>
 </html>

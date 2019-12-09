@@ -25,19 +25,17 @@
         duty,linkmanName,linkmanCall,bankCard  from staffmessage
     </select>
 
-    <select id="getLisetStaff" resultMap="staffMap" parameterType="staffMessage">
+    <select id="getLisetStaff" resultMap="staffMap" >
         select s_id,s_name,s_call,s_address,s_idcard,s_sex,s_age,s_img,static,education,entryDate,
         duty,linkmanName,linkmanCall,bankCard from staffmessage
         <where>
-            <if test="staffName!=null">
-                s_name=#{staffName}
+            <if test="param3.staffName!=null and param3.duty==null">
+                s_name like #{param3.staffName}"%"
             </if>
-            <if test="duty!=null and staffName!=null">
-                and duty=#{duty}
+            <if test="param3.duty!=null and param3.staffName!=null">
+                and duty=#{param3.buty}
             </if>
-            <if test="duty!=null and staffName==null">
-                duty=#{duty}
-            </if>
+            <if test="param3.duty!=null and param3.staffName==null" ></if>
         </where>
     </select>
     <select id="getId" parameterType="int" resultMap="staffMap">
@@ -50,19 +48,14 @@
 	 ,#{education},#{entryDate},#{staffStatic})
     </insert>
     <update id="updataStaff" parameterType="staffMessage">
-        update staffmessage set
+        update staffmessage set s_name=#{staffName},s_call=#{staffCal},s_address=#{staffAddress},s_idcard=#{staffIdcard}
+        ,linkmanName=#{linkmanName},linkmanCall=#{linkmanCall},
+        bankCard=#{bankCard},duty=#{duty},s_sex=#{staffSex},s_age=#{staffAge}
         <if test="staffImg!=null and staffImg!=''">
-            s_name=#{staffName},s_call=#{staffCal},s_address=#{staffAddress},s_idcard=#{staffIdcard}
-            ,linkmanName=#{linkmanName},linkmanCall=#{linkmanCall},
-            bankCard=#{bankCard},duty=#{duty},s_sex=#{staffSex},s_age=#{staffAge},s_img=#{staffImg} where
-            s_id=#{staffId}
+            ,s_img=#{staffImg} where s_id=#{staffId}
         </if>
-        <if test="staffImg==null">
-            s_name=#{staffName},s_call=#{staffCal},s_address=#{staffAddress},s_idcard=#{staffIdcard}
-            ,linkmanName=#{linkmanName},linkmanCall=#{linkmanCall},
-            bankCard=#{bankCard},duty=#{duty},s_sex=#{staffSex},s_age=#{staffAge} where
-            s_id=#{staffId}
-        </if>
+        where s_id=#{staffId}
+
     </update>
     <select id="login" resultMap="staffMap">
      select s_id,s_name,s_call,s_address,s_idcard,s_sex,s_age,s_img,static,education,entryDate,
@@ -72,4 +65,7 @@
      select s_id,s_name,s_call,s_address,s_idcard,s_sex,s_age,s_img,static,education,entryDate,
         duty,linkmanName,linkmanCall,bankCard  from staffmessage where s_id=#{param1} and s_call=#{param2}
     </select>
+    <update id="updatePassword">
+          update staffmessage set password=#{param2}  where s_id=#{param1}
+    </update>
 </mapper>

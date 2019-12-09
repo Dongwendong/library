@@ -51,8 +51,9 @@ public class StaffMessageDaoTest {
         StaffMessageDao dao = context.getBean("staffMessageDao", StaffMessageDao.class);
 
         StaffMessage message = new StaffMessage();
-        message.setDuty("保洁人员");
-        List<StaffMessage> list = dao.getLisetStaff(1, 6, message);
+
+        message.setDuty("前台人员");
+        List<StaffMessage> list = dao.getLisetStaff( 1,4,message);
         System.out.println(list.size());
     }
 

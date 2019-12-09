@@ -1,0 +1,49 @@
+#message{
+    width: 70%;
+    margin: 0 auto;
+}
+#imges{
+    width: 150px;
+    height: 150px;
+    background-color: whitesmoke;
+    margin: 0 auto;
+
+}
+#img-1{
+    width: 150px;
+    height: 120px;
+}
+#bookMessage{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.size{
+    width: 49%;
+    height: 40px;
+    margin-top: 6px;
+    float: left;
+}
+.name{
+    width: 30%;
+    height: 40px;
+    float: left;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: right;
+}
+.value{
+    width: 69%;
+    height: 40px;
+    float: left;
+}
+#cz{
+    margin-top: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+#btn{
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 30px;
+}

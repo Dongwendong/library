@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书信息中心</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.pagination.js"></script>
+    <link rel="stylesheet" href="css/pagination.css">
+    <script src="js/bookMessage.js"></script>
+    <link rel="stylesheet" href="css/book.css">
+</head>
+<body style="background-color:#D9EDF7">
+<div id="man">
+    <form id="for">
+        <div id="shous">
+            <span class="book-message">书籍名称：</span>
+            <span class="book-message-1">
+              <input type="text" class="form-control" name="bookName" id="name" placeholder="请输入书籍名称">
+        </span>
+            <span class="book-message-2">书籍状态：</span>
+            <span class="book-message-1">
+               <input type="radio" name="bookStatic" value="0" checked>告竭
+                  <input type="radio" name="bookStatic" value="1" checked="checked">
+                    充足
+        </span>
+            <span class="book-message-2">书籍类型：</span>
+            <span class="book-message-1" style="width: 300px">
+               <select id="select-1" style="width: 30%;height: 30px; font-size: 15px">
+                          <option>科技</option>
+                        <option>教育</option>
+                        <option>小说</option>
+                        <option>文艺</option>
+                        <option>童书</option>
+                        <option>经营</option>
+                         <option>励志</option>
+                         <option>生活</option>
+                    </select>—
+                    <select id="tad-1" style="width: 30%;height: 30px; font-size: 15px;text-align: center" name="bookType">
+                    </select>
+        </span>
+            <span>
+             <button type="button" class="btn btn-success" id="select">查询</button>
+        </span>
+        </div>
+    </form>
+
+</div>
+</div>
+<div id="message">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>图书编号</th>
+            <th>书籍名称</th>
+            <th>书籍价格</th>
+            <th>书籍类型</th>
+            <th>出版社</th>
+            <th>出版时间</th>
+            <th>作者</th>
+            <th>状态</th>
+            <th>操作</th>
+
+        </tr>
+        </thead>
+        <tbody id="tab">
+        <tr>
+
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+<div id="page" style="width: 30%;margin: 0 auto">
+</div>
+</body>
+</html>

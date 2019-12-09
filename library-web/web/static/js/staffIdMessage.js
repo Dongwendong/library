@@ -62,6 +62,7 @@ $(function () {
                 contentType:false,
                 success:function (res) {
                     alert(res.message);
+
                 }
             })
         } else {

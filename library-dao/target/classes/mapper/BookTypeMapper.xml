@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nf.library.dao.BookTypeDao">
+<resultMap id="bookTypeMap" type="bookType">
+    <id property="typeId" column="t_id"/>
+    <result property="t_sum" column="t_sum"/>
+    <result property="t_classify" column="t_classify"/>
+</resultMap>
+    <insert id="addBookType" parameterType="bookType">
+        insert  into booktype(t_sum,t_classify)values (#{t_sum},#{t_classify})
+    </insert>
+    <select id="listBookType" parameterType="string" resultMap="bookTypeMap">
+        select t_classify from booktype where t_sum=#{param1}
+    </select>
+    <select id="list" resultMap="bookTypeMap">
+            select  distinct  t_sum from  booktype
+    </select>
+</mapper>

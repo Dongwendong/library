@@ -61,4 +61,14 @@ public class BookMessageServiceImpl implements BookMessageService {
             throw new DataBaseException("数据库异常！操作失败");
         }
     }
+
+    @Override
+    public PageInfo<BookMessage> detail(Integer pageNum, Integer pageSize, BookMessage message) {
+        List<BookMessage>messages=dao.detail(pageNum, pageSize, message);
+        if (messages.size()>0){
+            PageInfo<BookMessage>pageInfo=new PageInfo<>(messages);
+            return  pageInfo;
+        }
+        throw new DataBaseException("没有找该书籍信息，请重新输入");
+    }
 }

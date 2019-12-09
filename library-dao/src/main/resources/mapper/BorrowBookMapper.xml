@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nf.library.dao.BorrowBookDao">
+    <resultMap id="bookMessageMap" type="bookMessage">
+        <id property="bookId" column="b_id"/>
+        <result property="bookName" column="b_name"/>
+        <result property="bookPrice" column="b_price"/>
+        <result property="bookType" column="b_type"/>
+        <result property="bookDate" column="b_data"/>
+        <result property="publishing" column="publishing"/>
+        <result property="bookStatic" column="b_state"/>
+        <result property="bookImg" column="b_img"/>
+        <result property="bookBrief" column="b_brief"/>
+        <result property="bookResidue" column="b_residue"/>
+        <result property="buyingDate" column="buyingDate"/>
+        <result property="author" column="author"/>
+        <result property="suitable" column="suitable"/>
+    </resultMap>
+    <resultMap id="userMap" type="userMessage">
+        <id property="userId" column="u_id"/>
+        <result property="userName" column="u_name"/>
+        <result property="userSex" column="u_sex"/>
+        <result property="userAge" column="u_age"/>
+        <result property="userCall" column="u_call"/>
+        <result property="idCard" column="u_idcard"/>
+        <result property="registerDate" column="registerDate"/>
+        <result property="integral" column="integral"/>
+        <result property="password" column="password"/>
+        <result property="cash" column="cash"/>
+        <result property="userImg" column="u_img"/>
+        <result property="userStatic" column="static"/>
+        <result property="edication" column="edication"/>
+    </resultMap>
+    <resultMap id="borrowMap" type="borrowBook">
+        <id property="borrowId" column="b_id"/>
+        <result property="userId" column="u_id"/>
+        <result property="bookId" column="book_id"/>
+        <result property="borrowDate" column="borrowDate"/>
+        <result property="returnDate" column="returnDate"/>
+        <result property="predictData" column="predictData"/>
+        <result property="gradeId" column="grade_Id"/>
+        <result property="borrowStatic" column="phase"/>
+        <result property="operator" column="operator"/>
+        <association property="books" resultMap="bookMessageMap"/>
+        <association property="userMessages" resultMap="userMap"/>
+    </resultMap>
+    <select id="borrowBook" resultMap="borrowMap">
+            select b.b_id,b.u_id,b.book_id,b.borrowDate,b.returnDate,b.predictData,k.b_name,k.suitable,k.b_price,k.b_type,
+            k.b_img ,k.b_residue ,k.author,u.u_name,u.u_call,u.u_idcard from borrowbook b LEFT JOIN  bookmessage k on
+            b.book_id=k.b_id LEFT JOIN usermessage u on b.u_id=u.u_id  where b.phase=0 order by b.borrowDate asc
+    </select>
+    <select id="listStatic" resultMap="borrowMap">
+            select b.b_id,b.u_id,b.book_id,b.borrowDate,b.returnDate,b.predictData,k.b_name,k.suitable,k.b_price,k.b_type,
+            k.b_img ,k.b_residue ,k.author,u.u_name,u.u_call,u.u_idcard from borrowbook b LEFT JOIN  bookmessage k on
+            b.book_id=k.b_id LEFT JOIN usermessage u on b.u_id=u.u_id  where b.phase=#{param3}
+            <if test="param4!=null">
+                and b.borrowDate=#{param4}
+            </if>
+            <if test="param5!=null">
+                and k.b_type=#{param5}
+            </if>
+            order by b.borrowDate asc
+    </select>
+    <select id="returnBook" resultMap="borrowMap">
+      SELECT u.u_name,u.u_call,b.b_id,b.predictData from borrowbook b LEFT JOIN usermessage u on u.u_id=b.u_id where
+        b.u_id=#{param1} and b.book_id=#{param2} and b.phase=0
+    </select>
+    <update id="updataBorrowBook">
+        update borrowbook set phase=1,operator=#{param4},returnDate=#{param5} where u_id=#{param1} and book_id=#{param2} and b_id=#{param3}
+    </update>
+    <select id="borrowBook1" resultMap="borrowMap">
+        select b.b_id,b.u_id,b.book_id,b.borrowDate,b.returnDate,b.predictData,k.b_name,k.suitable,k.b_price,k.b_type,
+        k.b_img ,k.b_residue ,k.author,u.u_name,u.u_call,u.u_idcard from borrowbook b LEFT JOIN bookmessage k on
+        b.book_id=k.b_id LEFT JOIN usermessage u on b.u_id=u.u_id where b.phase=0
+        <if test="param3!=null and param3!=''">
+            and u.u_call=#{param3}
+        </if>
+        <if test="param4!=null and param4!=0">
+            and b.book_id=#{param4}
+        </if>
+        order by b.borrowDate asc
+    </select>
+    <select id="getBorrowBookIdMessage" resultMap="borrowMap">
+     select b.borrowDate,b.predictData,k.b_type,k.b_price,k.b_id,k.b_name,u.cash,u.integral,u.u_call,u.u_name from
+     borrowbook b LEFT JOIN  bookmessage k on b.book_id=k.b_id LEFT JOIN usermessage u on b.u_id=u.u_id  where  b.b_id=#{param1}
+    </select>
+</mapper>

@@ -4,6 +4,7 @@ import com.github.pagehelper.PageInfo;
 import edu.nf.library.controller.vo.ResponseVO;
 import edu.nf.library.entity.StaffMessage;
 import edu.nf.library.service.StaffMessageService;
+import edu.nf.library.service.exception.DataBaseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.datetime.DateFormatter;
 import org.springframework.web.bind.WebDataBinder;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
@@ -38,7 +40,6 @@ public class StaffMessageController extends BaseController {
     @RequestMapping("/updateStaff")
     public ResponseVO updateStaff(MultipartFile file, StaffMessage message) {
         String fileName = file.getOriginalFilename();
-        message.toString();
         if (!fileName.equals("default.jpg")) {
             String path = "E:" + File.separator + "JavaFile" + File.separator +
                     "library" + File.separator + "library-web" + File.separator + "web" + File.separator +
@@ -92,5 +93,12 @@ public class StaffMessageController extends BaseController {
     public ResponseVO test1(MultipartFile file, HttpServletRequest request) {
         return success(test(file, request));
     }
-
+    @GetMapping("/staffMessage.do")
+    public ResponseVO staffMessage(HttpSession session) {
+        StaffMessage message = (StaffMessage) session.getAttribute("staffMessage");
+        if(message!=null){
+            return success(message);
+        }
+       throw new DataBaseException("没有找到信息");
+    }
 }

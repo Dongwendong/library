@@ -20,4 +20,5 @@ public interface BookTypeService {
      * @return
      */
     List<BookType> listBookType(String num);
+    List<BookType>list();
 }

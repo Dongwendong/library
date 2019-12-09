@@ -1,6 +1,7 @@
 package edu.nf.library.service;
 
 import com.github.pagehelper.PageInfo;
+import edu.nf.library.entity.BorrowBook;
 import edu.nf.library.entity.StaffMessage;
 
 import java.util.List;
@@ -27,4 +28,6 @@ public interface StaffMessageService {
     void updataStaff(StaffMessage message);
     StaffMessage login(Integer id ,String password);
     StaffMessage forGet(Integer id ,String phone);
+    void updatePassword(Integer id,String password);
+
 }
