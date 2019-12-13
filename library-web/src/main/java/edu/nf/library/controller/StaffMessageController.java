@@ -88,17 +88,26 @@ public class StaffMessageController extends BaseController {
         StaffMessage message = service.getId(sid);
         return success(message);
     }
+    @GetMapping("/getIdMessage.do")
+    public ResponseVO getIdMessage1(Integer id) {
+        StaffMessage message = service.getId(id);
+        return success(message);
+    }
 
     @RequestMapping("/test")
     public ResponseVO test1(MultipartFile file, HttpServletRequest request) {
         return success(test(file, request));
     }
-    @GetMapping("/staffMessage.do")
+    @RequestMapping("/staffMessage.do")
     public ResponseVO staffMessage(HttpSession session) {
         StaffMessage message = (StaffMessage) session.getAttribute("staffMessage");
         if(message!=null){
             return success(message);
         }
        throw new DataBaseException("没有找到信息");
+    }
+    @PostMapping("/likeName")
+    public ResponseVO<PageInfo<StaffMessage>>likeName(Integer pageNum, Integer pageSize ,String name,String duty){
+        return success( service.likeName(pageNum, pageSize, name, duty));
     }
 }

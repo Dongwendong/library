@@ -1,11 +1,14 @@
 package edu.nf.library.service.impl;
 
 import com.github.pagehelper.PageInfo;
+import edu.nf.library.dao.BookMessageDao;
 import edu.nf.library.dao.BorrowBookDao;
 import edu.nf.library.entity.BorrowBook;
 import edu.nf.library.service.BorrowBookService;
 import edu.nf.library.service.exception.DataBaseException;
 import edu.nf.library.util.DateUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +23,9 @@ import java.util.List;
 public class BorrowBookServiceImpl implements BorrowBookService {
     @Autowired
     private BorrowBookDao dao;
+    @Autowired
+    private BookMessageDao dao1;
+    private final static Logger logger= LoggerFactory.getLogger(BookTypeServiceImpl.class);
 
     @Override
     public PageInfo<BorrowBook> borrowBook(Integer pageNum, Integer pageSize) {
@@ -47,8 +53,11 @@ public class BorrowBookServiceImpl implements BorrowBookService {
     public void updataBorrowBook(Integer userId, Integer bookowId, Integer borrowId, Integer operator) {
         try {
             dao.updataBorrowBook(userId, bookowId, borrowId, operator, DateUtil.getData());
+            dao1.updateBookNum(bookowId);
+            logger.info("用户编号为："+userId+"归还书籍:"+bookowId+"系统操作者是"+operator);
         } catch (Exception e) {
             e.printStackTrace();
+            logger.info("用户编号为"+userId+"还书失败");
             throw new DataBaseException("数据异常，还书失败。");
         }
     }

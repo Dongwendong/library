@@ -65,6 +65,13 @@
      select s_id,s_name,s_call,s_address,s_idcard,s_sex,s_age,s_img,static,education,entryDate,
         duty,linkmanName,linkmanCall,bankCard  from staffmessage where s_id=#{param1} and s_call=#{param2}
     </select>
+    <select id="likeName" resultMap="staffMap">
+         select s_id,s_name,s_call,s_address,s_idcard,s_sex,s_age,s_img,static,education,entryDate,
+        duty,linkmanName,linkmanCall,bankCard  from staffmessage where duty=#{param4}
+        <if test="param1!=null and param1!=''">
+            and  s_name like #{param3}"%"
+        </if>
+    </select>
     <update id="updatePassword">
           update staffmessage set password=#{param2}  where s_id=#{param1}
     </update>

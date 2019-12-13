@@ -73,8 +73,8 @@ $(function () {
     function page(pageInfo, url) {
         $("#page").pagination(pageInfo.total, { //第一个参数指定共多少条记录
             items_per_page: pageInfo.pageSize, // 每页显示多少条记录
-            next_text: ">", //下一页按钮图标
-            prev_text: "<", //上一页按钮图标
+            next_text: "下一页", //下一页按钮图标
+            prev_text: "上一页", //上一页按钮图标
             num_display_entries: 5,//主体页数
             num_edge_entries: 2, //边缘页数
             callback: function (index) {//定义一个回调函数，用于每次点击页码发起分页查询请求

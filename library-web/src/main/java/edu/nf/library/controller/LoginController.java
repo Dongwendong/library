@@ -147,4 +147,10 @@ public class LoginController extends BaseController {
         session.setAttribute("staffMessage",null);
         return success("退出成功");
     }
+    @PostMapping("/verify")
+    public ResponseVO verify(String password,HttpSession session){
+       StaffMessage message=(StaffMessage) session.getAttribute("staffMessage");
+       service.login(message.getStaffId(),password);
+       return success("成功");
+    }
 }

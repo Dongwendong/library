@@ -37,4 +37,5 @@ public interface StaffMessageDao {
     StaffMessage login(Integer id,String password);
     StaffMessage forGet(Integer id,String phone);
     void updatePassword(Integer id,String password);
+    List<StaffMessage> likeName(@Param("pageNum") Integer pageNum, @Param("pageSize") Integer pageSize ,String name,String duty);
 }

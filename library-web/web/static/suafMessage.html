@@ -14,23 +14,31 @@
 </head>
 <body>
 <div id="man">
-    <span class="message">
-<input type="text" class="form-control" id="stafId" placeholder="请输入工号,明确查询员工信息">
+    <span class="message" style="width: 250px">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="staffId" placeholder="请输入员工工号">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" id="btn-1">查询</button>
+                    </span>
+                </div>
     </span>
-    <span class="message-1">
-<input type="text" class="form-control" name="staffName" id="stafName" placeholder="请输入姓名，模糊查询员工信息">
+    <div style="width:80px;height: 40px;float: left;text-align: right;font-size: 15px;line-height: 40px;margin-left: 40px;">
+        条件查询：
+    </div>
+    <span class="message-1" >
+    <input type="text" class="form-control" name="staffName" id="stafName" placeholder="请输入员工姓名">
     </span>
-    <span class="message-1">
-<select class="form-control" name="duty">
-     <option>前台人员</option>
-    <option>管理人员</option>
-    <option>保洁人员</option>
-    <option>人事部门</option>
-    <option>保安部门</option>
+    <span class="message-1" style="width: 120px">
+    <select class="form-control" id="duty">
+        <option value="前台人员">前台人员</option>
+        <option value="管理人员">管理人员</option>
+        <option value="保洁人员">保洁人员</option>
+        <option value="人事部门">人事部门</option>
+        <option value="保安部门">保安部门</option>
     </select>
     </span>
     <span class="message-2">
-<button type="button" class="btn btn-info" id="btn">查询</button>
+        <button type="button" class="btn btn-info" id="btn">查询</button>
     </span>
 </div>
 <div id="man-1">
@@ -40,7 +48,7 @@
         <thead>
         <tr>
             <th style="text-align: center">账号</th>
-            <th style="text-align: center"  >姓名</th>
+            <th style="text-align: center">姓名</th>
             <th style="text-align: center">职务</th>
             <th style="text-align: center">性别</th>
             <th style="text-align: center">年龄</th>

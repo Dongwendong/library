@@ -91,4 +91,16 @@ public class StaffMessageDaoTest {
         StaffMessage message=dao.forGet(10000,"15601804843");
         System.out.println(message);
     }
+
+    @Test
+    public void getIdMessage() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("daolicationContext.xml");
+        StaffMessageDao dao = context.getBean("staffMessageDao", StaffMessageDao.class);
+    }
+
+    @Test
+    public void likeName() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("daolicationContext.xml");
+        StaffMessageDao dao = context.getBean("staffMessageDao", StaffMessageDao.class);
+    }
 }

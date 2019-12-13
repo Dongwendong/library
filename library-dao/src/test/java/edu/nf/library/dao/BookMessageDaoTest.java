@@ -64,4 +64,12 @@ public class BookMessageDaoTest {
         List<BookMessage> list = dao.detail(1, 100, m);
         System.out.println(list.size());
     }
+
+    @Test
+    public void updateBookNum() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("daolicationContext.xml");
+        BookMessageDao dao = context.getBean("bookMessageDao", BookMessageDao.class);
+        Integer num=10011;
+        dao.updateBookNum(10011);
+    }
 }

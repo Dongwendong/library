@@ -20,4 +20,5 @@ public interface BorrowBookDao {
     List<BorrowBook>borrowBook1(@Param("pageNum") Integer pageNum, @Param("pageSize") Integer pageSize,String phone,Integer bookId);
     BorrowBook getBorrowBookIdMessage(Integer userId);
     List<BorrowBook>listStatic(@Param("pageNum") Integer pageNum, @Param("pageSize") Integer pageSize,Integer bookStatic,Date bookData,String bookType);
+
 }

@@ -12,18 +12,19 @@ import java.util.Date;
  */
 public class UserMessage {
     /***
-     *   userId;
-     *     userName 用户姓名;
-     *     userSex 性别
-     *      userAge 年龄
-     *     userCall 电话号码
-     *     idCard;身份证
-     *     registerDate;注册时间
-     *      integral;积分
+     *   userId;1
+     *     userName 用户姓名;1
+     *     userSex 性别1
+     *      userAge 年龄1
+     *     userCall 电话号码1
+     *     idCard;身份证1
+     *     registerDate;注册时间1
+     *      integral;积分1
      *   password;密码
      *     userImg;图片
      *      userStatic;状态
      *      edication:学历
+     *      cash:押金
      */
     private String userId;
     private String userName;
@@ -39,6 +40,16 @@ public class UserMessage {
     private String userImg;
     private Integer userStatic;
     private String edication;
+    private String userLike;
+
+    public String getUserLike() {
+        return userLike;
+    }
+
+    public void setUserLike(String userLike) {
+        this.userLike = userLike;
+    }
+
     public String getUserId() {
         return userId;
     }

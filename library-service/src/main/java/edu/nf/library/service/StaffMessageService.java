@@ -3,6 +3,7 @@ package edu.nf.library.service;
 import com.github.pagehelper.PageInfo;
 import edu.nf.library.entity.BorrowBook;
 import edu.nf.library.entity.StaffMessage;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -29,5 +30,5 @@ public interface StaffMessageService {
     StaffMessage login(Integer id ,String password);
     StaffMessage forGet(Integer id ,String phone);
     void updatePassword(Integer id,String password);
-
+    PageInfo<StaffMessage> likeName(@Param("pageNum") Integer pageNum, @Param("pageSize") Integer pageSize , String name, String duty);
 }

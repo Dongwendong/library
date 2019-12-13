@@ -38,7 +38,7 @@
            select b.b_id, b.b_name,b.b_price,b.b_data,b.publishing,b.b_state,b.b_type,b.b_img,b.b_brief,b.b_residue,b.buyingDate,b.author,b.suitable,t.t_classify,t.t_sum from bookmessage
         b left join booktype t on b.b_type=t.t_classify where b.b_type=#{param3.bookType} and b.b_state=#{param3.bookStatic}
         <if test="param3.bookName!=null and param3.bookName!=''">
-            and b.b_name= '%'+#{param3.bookName}+'%'
+            and b.b_name like #{param3.bookName}"%"
         </if>
     </select>
     <update id="updateBook" parameterType="bookMessage">
@@ -53,6 +53,9 @@
             b_state=#{bookStatic},b_brief=#{bookBrief},b_residue=#{bookResidue},author=#{author}
             ,suitable=#{suitable},b_img=#{bookImg} where b_id=#{bookId}
         </if>
+    </update>
+    <update id="updateBookNum" >
+        update bookmessage set b_residue=b_residue+1 where b_id=#{param1}
     </update>
 
 </mapper>

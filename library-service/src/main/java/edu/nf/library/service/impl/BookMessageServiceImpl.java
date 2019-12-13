@@ -6,6 +6,8 @@ import edu.nf.library.entity.BookMessage;
 import edu.nf.library.entity.StaffMessage;
 import edu.nf.library.service.BookMessageService;
 import edu.nf.library.service.exception.DataBaseException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,14 +21,16 @@ import java.util.List;
 public class BookMessageServiceImpl implements BookMessageService {
     @Autowired
     BookMessageDao dao;
-
+    private final static Logger logger= LoggerFactory.getLogger(BookMessageServiceImpl.class);
     @Override
     public void addBookMessage(BookMessage message) {
         try {
 
             dao.addBookMessage(message);
+            logger.info(message.getBookName()+"添加成功");
         } catch (Exception e) {
             e.printStackTrace();
+            logger.info(message.getBookName()+"添加失败");
             throw new DataBaseException("数据库异常！添加失败");
         }
 
@@ -40,6 +44,7 @@ public class BookMessageServiceImpl implements BookMessageService {
             return pageInfo;
         } catch (Exception e) {
             e.printStackTrace();
+            logger.info("分页查询失败");
             throw new DataBaseException("数据库异常！查询失败");
         }
     }
@@ -47,9 +52,14 @@ public class BookMessageServiceImpl implements BookMessageService {
     @Override
     public BookMessage getIdMessage(Integer id) {
         try {
-            return dao.getIdMessage(id);
+            BookMessage bookMessage= dao.getIdMessage(id);
+            logger.info(bookMessage.getBookName()+"查询成功");
+            return bookMessage;
+
         } catch (Exception e) {
+            logger.info(id+"查询失败");
             throw new DataBaseException("数据库异常！查询失败");
+
         }
     }
 
@@ -57,7 +67,9 @@ public class BookMessageServiceImpl implements BookMessageService {
     public void updateBook(BookMessage message) {
         try {
             dao.updateBook(message);
+            logger.info(message.getBookName()+"修改成功");
         } catch (Exception e) {
+            logger.info(message.getBookName()+"修改失败");
             throw new DataBaseException("数据库异常！操作失败");
         }
     }

@@ -6,7 +6,7 @@ $(function () {
         success: function (res) {
             if (res.code == 200) {
                 tad(res.data);
-                page(res.data,listBook);
+                page(res.data);
             }
         }
     })
@@ -76,7 +76,7 @@ $(function () {
                 success:function (res) {
                     if (res.code==200){
                         tad(res.data);
-                        page(res.data,detail);
+                        page1(res.data,);
                     }
                     if (res.code==500){
                         alert(res.message);
@@ -98,7 +98,30 @@ $(function () {
         })
   })
     //分页
-    function page(pageInfo,url) {
+    function page(pageInfo) {
+        $("#page").pagination(pageInfo.total, { //第一个参数指定共多少条记录
+            items_per_page: pageInfo.pageSize, // 每页显示多少条记录
+            next_text: "下一页", //下一页按钮图标
+            prev_text: "上一页", //上一页按钮图标
+            num_display_entries: 5,//主体页数
+            num_edge_entries: 2, //边缘页数
+            callback: function (index) {//定义一个回调函数，用于每次点击页码发起分页查询请求
+                //index为当前页码，只不过下标是从0开始，因此需要+1操作
+                var pageNum = ++index;
+                $.ajax({
+                    url: '../listBook',
+                    method: 'post',
+                    data: {'pageNum': pageNum, 'pageSize': 6},
+                    success: function (result) {
+                        //渲染表格
+                        tad(result.data);
+                    }
+                });
+            }
+        });
+    };
+    //分页
+    function page1(pageInfo) {
         $("#page").pagination(pageInfo.total, { //第一个参数指定共多少条记录
             items_per_page: pageInfo.pageSize, // 每页显示多少条记录
             next_text: ">", //下一页按钮图标
@@ -109,7 +132,7 @@ $(function () {
                 //index为当前页码，只不过下标是从0开始，因此需要+1操作
                 var pageNum = ++index;
                 $.ajax({
-                    url: '../'+url,
+                    url: '../detail',
                     method: 'post',
                     data: {'pageNum': pageNum, 'pageSize': 6},
                     success: function (result) {
@@ -119,6 +142,5 @@ $(function () {
                 });
             }
         });
-    }
-
+    };
 })
